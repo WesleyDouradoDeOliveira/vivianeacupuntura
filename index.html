@@ -1,0 +1,3548 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dra. Viviane | Acupuntura Veterinária & Terapias Integrativas</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --verde: #2D5C3F;
+    --verde-medio: #3D7A56;
+    --verde-claro: #7AB892;
+    --verde-palido: #C8E6D4;
+    --creme: #F7F3EC;
+    --creme-escuro: #EDE6D8;
+    --dourado: #C9A84C;
+    --dourado-claro: #E8CF8A;
+    --marrom: #5C3D1E;
+    --texto: #1E2E26;
+    --texto-suave: #4A6355;
+    --branco: #FDFAF6;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--branco);
+    color: var(--texto);
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(253,250,246,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(45,92,63,0.12);
+    padding: 0 5%;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    color: var(--verde);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+
+  .nav-logo span {
+    color: var(--dourado);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+  }
+
+  .nav-link {
+    font-size: 0.875rem;
+    color: var(--texto-suave);
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.2s;
+  }
+
+  .nav-link:hover {
+    color: var(--verde);
+  }
+
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+  }
+
+  .nav-cta {
+    background: var(--verde);
+    color: var(--branco);
+    border: none;
+    padding: 10px 22px;
+    border-radius: 40px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+    display: inline-block;
+  }
+
+  .nav-cta:hover {
+    background: var(--verde-medio);
+    transform: translateY(-1px);
+  }
+
+  /* MENU HAMBURGUER */
+  .nav-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    z-index: 200;
+  }
+
+  .nav-hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--verde);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+
+  .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .nav-mobile-menu {
+    display: none;
+    position: fixed;
+    top: 64px; left: 0; right: 0;
+    background: rgba(253,250,246,0.98);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(45,92,63,0.12);
+    padding: 24px 6%;
+    flex-direction: column;
+    gap: 0;
+    z-index: 99;
+    box-shadow: 0 8px 32px rgba(45,92,63,0.1);
+  }
+
+  .nav-mobile-menu.open { display: flex; }
+
+  .nav-mobile-link {
+    display: block;
+    padding: 16px 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--texto);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(45,92,63,0.08);
+    transition: color 0.2s, padding-left 0.2s;
+  }
+
+  .nav-mobile-link:hover { color: var(--verde); padding-left: 8px; }
+
+  .nav-mobile-wa {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    background: #25D366;
+    color: #fff;
+    padding: 14px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    justify-content: center;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .nav-cta { display: none; }
+    .nav-hamburger { display: flex; }
+  }
+
+  /* HERO */
+  .hero {
+    height: 100vh;
+    min-height: 600px;
+    padding-top: 64px;
+    background: var(--creme);
+    display: grid;
+    grid-template-columns: 52% 48%;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 500px; height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(122,184,146,0.18) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; left: 10%;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,168,76,0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 6% 80px 8%;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(45,92,63,0.1);
+    border: 1px solid rgba(45,92,63,0.2);
+    color: var(--verde);
+    padding: 6px 16px;
+    border-radius: 40px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    width: fit-content;
+    margin-bottom: 24px;
+    animation: fadeUp 0.6s ease both;
+  }
+
+  .hero-institucional {
+    display: inline-block;
+    margin-top: 12px;
+    background: rgba(45,92,63,0.06);
+    border: 1px solid rgba(45,92,63,0.08);
+    color: var(--verde);
+    padding: 8px 14px;
+    border-radius: 18px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    max-width: 760px;
+    line-height: 1.4;
+  }
+
+  .hero-badge::before {
+    content: '🐾';
+    font-size: 14px;
+  }
+
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 4vw, 3.6rem);
+    line-height: 1.18;
+    color: var(--verde);
+    margin-bottom: 24px;
+    animation: fadeUp 0.6s 0.1s ease both;
+  }
+
+  .hero-title em {
+    color: var(--dourado);
+    font-style: italic;
+  }
+
+  .hero-sub {
+    font-size: 1.1rem;
+    color: var(--texto-suave);
+    max-width: 480px;
+    margin-bottom: 24px;
+    font-weight: 300;
+    line-height: 1.8;
+    animation: fadeUp 0.6s 0.2s ease both;
+  }
+
+  .hero-note {
+    font-size: 0.95rem;
+    color: var(--branco);
+    background: rgba(45, 92, 63, 0.3);
+    border-left: 4px solid var(--dourado);
+    padding: 16px 24px;
+    border-radius: 8px;
+    max-width: 520px;
+    margin-bottom: 32px;
+    font-weight: 500;
+    animation: fadeUp 0.6s 0.25s ease both;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    animation: fadeUp 0.6s 0.3s ease both;
+  }
+
+  .btn-primary {
+    background: var(--verde);
+    color: var(--branco);
+    border: none;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    box-shadow: 0 4px 20px rgba(45,92,63,0.25);
+  }
+
+  .btn-primary:hover {
+    background: var(--verde-medio);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(45,92,63,0.3);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--verde);
+    border: 1.5px solid var(--verde);
+    padding: 15px 28px;
+    border-radius: 50px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+  }
+
+  .btn-secondary:hover {
+    background: var(--verde);
+    color: var(--branco);
+  }
+
+  .hero-stats {
+    margin-top: 56px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 36px;
+    animation: fadeUp 0.6s 0.4s ease both;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--verde);
+    font-weight: 600;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+    color: var(--texto-suave);
+    margin-top: 4px;
+    font-weight: 400;
+  }
+
+  .stat-divider {
+    width: 1px;
+    background: rgba(45,92,63,0.2);
+    margin: 4px 0;
+  }
+
+  .hero-image-col {
+    position: relative;
+    overflow: hidden;
+    background: var(--verde-palido);
+  }
+
+  .hero-real-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+
+  /* gradient fade on left edge to blend with content */
+  .hero-image-col::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, var(--creme) 0%, transparent 18%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .hero-placeholder { display: none; }
+
+  /* SEÇÃO: PARA QUEM É */
+  .section-para-quem {
+    background: var(--verde);
+    padding: 80px 8%;
+    color: var(--branco);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .section-para-quem::before {
+    content: '"';
+    position: absolute;
+    top: -20px; left: 5%;
+    font-family: 'Playfair Display', serif;
+    font-size: 20rem;
+    color: rgba(255,255,255,0.04);
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .para-quem-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    font-style: italic;
+    line-height: 1.55;
+    max-width: 800px;
+    margin: 0 auto 32px;
+    color: rgba(255,255,255,0.95);
+  }
+
+  .para-quem-detalhe {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.7);
+    max-width: 600px;
+    margin: 0 auto 40px;
+  }
+
+  .para-quem-atendimento {
+    background: rgba(201, 168, 76, 0.2);
+    border-radius: 12px;
+    padding: 24px 32px;
+    margin-top: 48px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid var(--dourado);
+  }
+
+  .para-quem-atendimento h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--dourado);
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+
+  .para-quem-atendimento p {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* SEÇÃO GERAL */
+  .section {
+    padding: 100px 8%;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--dourado);
+    margin-bottom: 16px;
+  }
+
+  .section-label::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 1.5px;
+    background: var(--dourado);
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    color: var(--verde);
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  .section-title em {
+    font-style: italic;
+    color: var(--dourado);
+  }
+
+  .section-desc {
+    color: var(--texto-suave);
+    max-width: 560px;
+    font-weight: 300;
+    font-size: 1.05rem;
+  }
+
+  /* SERVIÇOS */
+  .servicos-section {
+    background: var(--creme);
+  }
+
+  .servicos-header {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  .servicos-header .section-desc {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 900px) {
+    .servicos-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 560px) {
+    .servicos-grid { grid-template-columns: 1fr; }
+  }
+
+  .servico-card {
+    background: var(--branco);
+    border-radius: 20px;
+    padding: 36px 30px;
+    border: 1px solid rgba(45,92,63,0.1);
+    transition: transform 0.25s, box-shadow 0.25s;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .servico-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--verde-claro), var(--dourado));
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+
+  .servico-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(45,92,63,0.12);
+  }
+
+  .servico-card:hover::before {
+    opacity: 1;
+  }
+
+  .servico-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: var(--verde-palido);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .servico-nome {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: var(--verde);
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  .servico-desc {
+    font-size: 0.9rem;
+    color: var(--texto-suave);
+    line-height: 1.7;
+    font-weight: 300;
+    flex: 1;
+  }
+
+  .servico-tag {
+    display: inline-block;
+    margin-top: 16px;
+    font-size: 0.75rem;
+    background: rgba(201,168,76,0.12);
+    color: var(--marrom);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+  }
+
+  .fluidoterapia-section {
+    background: rgba(45,92,63,0.06);
+  }
+
+  .fluidoterapia-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 32px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 64px 0 40px;
+  }
+
+  .fluidoterapia-copy {}
+
+  .fluidoterapia-features {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 32px;
+  }
+
+  .feature-card {
+    background: var(--branco);
+    border-radius: 22px;
+    padding: 22px;
+    border: 1px solid rgba(45,92,63,0.12);
+    box-shadow: 0 12px 30px rgba(45,92,63,0.06);
+  }
+
+  .feature-card strong {
+    display: block;
+    color: var(--verde);
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+
+  .feature-card p {
+    color: var(--texto-suave);
+    font-size: 0.92rem;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  .fluidoterapia-image img {
+    width: 100%;
+    border-radius: 28px;
+    display: block;
+  }
+
+  @media (max-width: 900px) {
+    .fluidoterapia-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .fluidoterapia-features {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* TRAJETÓRIA */
+  .trajetoria-section {
+    background: var(--branco);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .trajetoria-image {
+    background: transparent;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .trajetoria-image::before {
+    display: none;
+  }
+
+  .trajetoria-image-icon {
+    font-size: 4rem;
+  }
+
+  .trajetoria-image p {
+    color: var(--texto-suave);
+    font-size: 0.85rem;
+    opacity: 0.7;
+  }
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .timeline-item {
+    display: flex;
+    gap: 24px;
+    padding-bottom: 36px;
+    position: relative;
+  }
+
+  .timeline-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 19px;
+    top: 40px;
+    bottom: 0;
+    width: 2px;
+    background: var(--verde-palido);
+  }
+
+  .timeline-dot {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--verde-palido);
+    border: 2px solid var(--verde);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .timeline-content {}
+
+  .timeline-ano {
+    font-size: 0.78rem;
+    color: var(--dourado);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .timeline-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    color: var(--verde);
+    margin-bottom: 6px;
+  }
+
+  .timeline-desc {
+    font-size: 0.9rem;
+    color: var(--texto-suave);
+    font-weight: 300;
+  }
+
+  /* DIFERENCIAIS */
+  .diferenciais-section {
+    background: var(--creme);
+  }
+
+  .diferenciais-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 56px;
+  }
+
+  .diferencial-card {
+    background: var(--branco);
+    border-radius: 16px;
+    padding: 28px;
+    border: 1px solid rgba(45,92,63,0.1);
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+  }
+
+  .diferencial-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--verde-palido);
+    font-weight: 600;
+    line-height: 1;
+    flex-shrink: 0;
+    width: 44px;
+  }
+
+  .diferencial-body {}
+
+  .diferencial-titulo {
+    font-weight: 500;
+    color: var(--verde);
+    margin-bottom: 6px;
+    font-size: 1rem;
+  }
+
+  .diferencial-desc {
+    font-size: 0.875rem;
+    color: var(--texto-suave);
+    font-weight: 300;
+    line-height: 1.7;
+  }
+
+  /* CASOS */
+  .casos-section {
+    background: var(--branco);
+  }
+
+  .casos-header {
+    max-width: 600px;
+    margin-bottom: 56px;
+  }
+
+  .casos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+  }
+
+  .caso-card {
+    background: var(--creme);
+    border-radius: 18px;
+    padding: 28px;
+    border: 1px solid rgba(45,92,63,0.08);
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .caso-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .caso-animal {
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+
+  .caso-nome {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    color: var(--verde);
+    margin-bottom: 4px;
+  }
+
+  .caso-condicao {
+    font-size: 0.78rem;
+    color: var(--dourado);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+  }
+
+  .caso-resultado {
+    font-size: 0.875rem;
+    color: var(--texto-suave);
+    font-weight: 300;
+    line-height: 1.7;
+    flex: 1;
+  }
+
+  .caso-badge {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 0.75rem;
+    background: var(--verde-palido);
+    color: var(--verde);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+  }
+
+  /* FILOSOFIA */
+  .filosofia-section {
+    background: var(--creme-escuro);
+    text-align: center;
+    padding: 100px 8%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .filosofia-section::before {
+    content: '🌿';
+    position: absolute;
+    top: -30px; left: -20px;
+    font-size: 12rem;
+    opacity: 0.04;
+    pointer-events: none;
+  }
+
+  .filosofia-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+    color: var(--verde);
+    line-height: 1.55;
+    max-width: 780px;
+    margin: 0 auto 28px;
+    font-style: italic;
+  }
+
+  .filosofia-atrib {
+    color: var(--texto-suave);
+    font-size: 0.9rem;
+    font-weight: 300;
+  }
+
+  .filosofia-cards {
+    display: flex;
+    gap: 20px;
+    margin-top: 64px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .filosofia-card {
+    background: var(--branco);
+    border-radius: 16px;
+    padding: 24px 28px;
+    max-width: 220px;
+    border: 1px solid rgba(45,92,63,0.12);
+    text-align: center;
+  }
+
+  .filosofia-card-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .filosofia-card-text {
+    font-size: 0.875rem;
+    color: var(--texto-suave);
+    font-weight: 300;
+    line-height: 1.6;
+  }
+
+  .filosofia-card-text strong {
+    display: block;
+    color: var(--verde);
+    font-weight: 500;
+    margin-bottom: 4px;
+    font-size: 0.95rem;
+  }
+
+  /* GALERIA */
+  .galeria-section {
+    background: var(--verde);
+    padding: 80px 8%;
+    text-align: center;
+  }
+
+  .galeria-section .section-label {
+    color: var(--dourado-claro);
+    display: flex;
+  }
+
+  .galeria-section .section-label::before {
+    background: var(--dourado-claro);
+  }
+
+  .galeria-section .section-title {
+    color: var(--branco);
+  }
+
+  .galeria-section .section-title em {
+    color: var(--dourado-claro);
+  }
+
+  .galeria-section .section-desc {
+    color: rgba(255,255,255,0.7);
+    max-width: 560px;
+  }
+
+  .galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 280px);
+    gap: 14px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .galeria-item {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .galeria-grande {
+    grid-row: span 2;
+  }
+
+  .galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    transition: transform 0.4s ease;
+    display: block;
+    background: var(--verde-palido);
+  }
+
+  .galeria-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(45,92,63,0.8) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+  }
+
+  .galeria-overlay span {
+    color: var(--branco);
+    font-size: 0.85rem;
+    font-weight: 400;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+  }
+
+  .galeria-item:hover img {
+    transform: scale(1.05);
+  }
+
+  .galeria-item:hover .galeria-overlay {
+    opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    .galeria-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .galeria-grande {
+      grid-row: span 1;
+      aspect-ratio: 3/4;
+    }
+  }
+
+  /* CTA FINAL */
+  .cta-section {
+    background: var(--verde);
+    padding: 100px 8%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    top: -100px; left: -100px;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+  }
+
+  .cta-section::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; right: -80px;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    background: rgba(201,168,76,0.1);
+  }
+
+  .cta-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    color: var(--branco);
+    line-height: 1.2;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-title em {
+    color: var(--dourado-claro);
+    font-style: italic;
+  }
+
+  .cta-desc {
+    color: rgba(255,255,255,0.75);
+    font-weight: 300;
+    max-width: 540px;
+    margin: 0 auto 44px;
+    font-size: 1.05rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-btn {
+    background: var(--dourado);
+    color: var(--verde);
+    border: none;
+    padding: 18px 40px;
+    border-radius: 50px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.2s;
+    box-shadow: 0 4px 24px rgba(201,168,76,0.4);
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-btn:hover {
+    background: var(--dourado-claro);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(201,168,76,0.5);
+  }
+
+  .cta-info {
+    margin-top: 24px;
+    color: rgba(255,255,255,0.5);
+    font-size: 0.85rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--texto);
+    color: rgba(255,255,255,0.6);
+    padding: 48px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .footer-logo {
+    font-family: 'Playfair Display', serif;
+    color: var(--branco);
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  .footer-logo span { color: var(--dourado-claro); }
+
+  .footer-text {
+    font-size: 0.82rem;
+    font-weight: 300;
+  }
+
+  /* FOTO NO HERO */
+  .hero-real-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 15%;
+    z-index: 1;
+  }
+
+  /* FOTOS NOS CARDS DE SERVIÇOS */
+  .servico-icon-foto {
+    width: 100%;
+    height: 180px;
+    border-radius: 14px;
+    overflow: hidden;
+    padding: 0;
+    background: var(--verde-palido);
+  }
+
+  .servico-foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 14px;
+    transition: transform 0.3s ease;
+  }
+
+  .servico-card:hover .servico-foto {
+    transform: scale(1.02);
+  }
+
+  /* FOTOS NOS CASOS */
+  .caso-foto-wrap {
+    width: 100%;
+    height: 220px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 14px;
+    background: var(--verde-palido);
+  }
+
+  .caso-foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    transition: transform 0.3s ease;
+  }
+
+  .caso-card:hover .caso-foto {
+    transform: scale(1.02);
+  }
+
+  /* DEPOIMENTOS */
+  .depoimentos-section {
+    background: var(--creme);
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .depoimentos-header {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+
+  .depoimentos-header .section-desc {
+    margin: 0 auto;
+  }
+
+  /* CAROUSEL */
+  .depoimentos-carousel-wrap {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .depoimentos-grid {
+    display: flex;
+    gap: 24px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+  }
+
+  .depoimento-card {
+    background: var(--branco);
+    border-radius: 20px;
+    padding: 32px 28px;
+    border: 1px solid rgba(45,92,63,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: transform 0.25s, box-shadow 0.25s;
+    flex: 0 0 calc(33.333% - 16px);
+    min-width: 0;
+  }
+
+  @media (max-width: 900px) {
+    .depoimento-card { flex: 0 0 calc(50% - 12px); }
+  }
+  @media (max-width: 580px) {
+    .depoimento-card { flex: 0 0 100%; }
+  }
+
+  .depoimento-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(45,92,63,0.1);
+  }
+
+  .carousel-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 36px;
+  }
+
+  .carousel-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1.5px solid var(--verde);
+    background: transparent;
+    color: var(--verde);
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, color 0.2s;
+    flex-shrink: 0;
+  }
+
+  .carousel-btn:hover {
+    background: var(--verde);
+    color: var(--branco);
+  }
+
+  .carousel-btn:disabled {
+    opacity: 0.3;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  .carousel-dots {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .carousel-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(45,92,63,0.2);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .carousel-dot.active {
+    background: var(--verde);
+    transform: scale(1.3);
+  }
+
+  .depoimento-estrelas {
+    color: var(--dourado);
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+
+  .depoimento-texto {
+    font-size: 0.9rem;
+    color: var(--texto-suave);
+    line-height: 1.8;
+    font-weight: 300;
+    font-style: italic;
+    flex: 1;
+  }
+
+  .depoimento-autor {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(45,92,63,0.08);
+  }
+
+  .depoimento-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--verde);
+    color: var(--branco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+
+  .depoimento-nome {
+    font-weight: 500;
+    color: var(--verde);
+    font-size: 0.9rem;
+  }
+
+  .depoimento-pet {
+    font-size: 0.78rem;
+    color: var(--texto-suave);
+    font-weight: 300;
+  }
+
+  /* FAQ */
+  .faq-section {
+    background: var(--branco);
+  }
+
+  .faq-header {
+    max-width: 600px;
+    margin-bottom: 56px;
+  }
+
+  .faq-lista {
+    max-width: 780px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid rgba(45,92,63,0.12);
+  }
+
+  .faq-pergunta {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 22px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--verde);
+    text-align: left;
+    transition: color 0.2s;
+  }
+
+  .faq-pergunta:hover {
+    color: var(--dourado);
+  }
+
+  .faq-icone {
+    font-size: 1.4rem;
+    color: var(--dourado);
+    flex-shrink: 0;
+    transition: transform 0.3s;
+    font-weight: 300;
+    line-height: 1;
+  }
+
+  .faq-icone.open {
+    transform: rotate(45deg);
+  }
+
+  .faq-resposta {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+  }
+
+  .faq-resposta.open {
+    max-height: 300px;
+    padding-bottom: 20px;
+  }
+
+  .faq-resposta p {
+    font-size: 0.9rem;
+    color: var(--texto-suave);
+    font-weight: 300;
+    line-height: 1.8;
+  }
+
+  /* LOCALIZAÇÃO & CONTATO */
+  .localizacao-section {
+    background: var(--creme);
+  }
+
+  .localizacao-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .local-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    margin-bottom: 36px;
+  }
+
+  .local-icone {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .local-titulo {
+    font-weight: 500;
+    color: var(--verde);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 6px;
+  }
+
+  .local-desc {
+    font-size: 0.9rem;
+    color: var(--texto-suave);
+    font-weight: 300;
+    line-height: 1.8;
+  }
+
+  .local-desc em {
+    font-style: italic;
+    font-size: 0.82rem;
+    opacity: 0.7;
+  }
+
+  .local-btns {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+
+  .local-btn-mapa {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--verde);
+    color: var(--branco);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .local-btn-mapa:hover {
+    background: var(--verde-medio);
+    transform: translateY(-1px);
+  }
+
+  .local-btn-waze {
+    background: var(--dourado);
+    color: var(--marrom);
+  }
+
+  .local-btn-waze:hover {
+    background: var(--dourado-claro);
+  }
+
+  /* FORMULÁRIO */
+  .contato-form {
+    background: var(--branco);
+    border-radius: 24px;
+    padding: 40px 36px;
+    border: 1px solid rgba(45,92,63,0.1);
+    box-shadow: 0 8px 40px rgba(45,92,63,0.07);
+  }
+
+  .form-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: var(--verde);
+    margin-bottom: 8px;
+  }
+
+  .form-desc {
+    font-size: 0.875rem;
+    color: var(--texto-suave);
+    font-weight: 300;
+    margin-bottom: 28px;
+    line-height: 1.6;
+  }
+
+  .form-grupo {
+    margin-bottom: 18px;
+  }
+
+  .form-label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--verde);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 6px;
+  }
+
+  .form-input {
+    width: 100%;
+    background: var(--creme);
+    border: 1.5px solid rgba(45,92,63,0.15);
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    color: var(--texto);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+  }
+
+  .form-input:focus {
+    border-color: var(--verde);
+    box-shadow: 0 0 0 3px rgba(45,92,63,0.08);
+  }
+
+  select.form-input {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%232D5C3F' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    cursor: pointer;
+  }
+
+  .form-textarea {
+    resize: vertical;
+    min-height: 100px;
+    line-height: 1.6;
+  }
+
+  .form-btn {
+    width: 100%;
+    background: var(--verde);
+    color: var(--branco);
+    border: none;
+    padding: 16px;
+    border-radius: 50px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    box-shadow: 0 4px 20px rgba(45,92,63,0.25);
+    margin-top: 8px;
+  }
+
+  .form-btn:hover {
+    background: var(--verde-medio);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(45,92,63,0.3);
+  }
+
+  /* FOOTER ATUALIZADO */
+  .footer-links {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+  }
+
+  .footer-links a {
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 300;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover {
+    color: var(--dourado-claro);
+  }
+
+  .footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-align: right;
+  }
+
+  @media (max-width: 768px) {
+    .localizacao-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    .contato-form {
+      padding: 28px 22px;
+    }
+    .footer-links {
+      justify-content: center;
+    }
+    .footer-info {
+      text-align: center;
+    }
+    .faq-lista {
+      max-width: 100%;
+    }
+  }
+
+  /* ANIMAÇÕES */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* ANTES E DEPOIS - NICOLAS DESTAQUE */
+  .caso-destaque {
+    background: linear-gradient(135deg, var(--verde) 0%, var(--verde-medio) 100%);
+    border-radius: 24px;
+    padding: 40px;
+    margin-bottom: 48px;
+    color: var(--branco);
+    text-align: center;
+  }
+
+  .caso-destaque-tag {
+    display: inline-block;
+    background: var(--dourado);
+    color: var(--marrom);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+  }
+
+  .caso-destaque-nome {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--branco);
+  }
+
+  .caso-destaque-desc {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.8);
+    font-weight: 300;
+    max-width: 620px;
+    margin: 0 auto 32px;
+    line-height: 1.8;
+  }
+
+  .antes-depois {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+
+  .ad-col {
+    flex: 1;
+    max-width: 320px;
+  }
+
+  .ad-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+  }
+
+  .ad-antes { background: rgba(255,100,100,0.25); color: #ffaaaa; }
+  .ad-depois { background: rgba(100,255,150,0.25); color: #aaffcc; }
+
+  .ad-foto-wrap {
+    border-radius: 16px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    background: rgba(255,255,255,0.1);
+    border: 2px solid rgba(255,255,255,0.15);
+  }
+
+  .ad-foto {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .ad-texto {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.7);
+    margin-top: 10px;
+    line-height: 1.6;
+    font-weight: 300;
+  }
+
+  .ad-seta {
+    font-size: 2.5rem;
+    color: var(--dourado-claro);
+    flex-shrink: 0;
+    font-weight: 300;
+  }
+
+  @media (max-width: 600px) {
+    .antes-depois { flex-direction: column; gap: 16px; }
+    .ad-seta { transform: rotate(90deg); }
+    .caso-destaque { padding: 28px 20px; }
+  }
+
+  /* ========================
+     EU E ELES
+  ======================== */
+  .eu-eles-section {
+    background: var(--creme);
+    padding: 100px 8%;
+  }
+
+  .eu-eles-header {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  .eu-eles-header .section-desc {
+    margin: 0 auto;
+    max-width: 580px;
+  }
+
+  /* Mosaico principal */
+  .eu-eles-mosaico {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 280px);
+    gap: 14px;
+    max-width: 1100px;
+    margin: 0 auto 80px;
+  }
+
+  .eu-eles-item {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .eu-eles-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 0.5s ease;
+    display: block;
+  }
+
+  .eu-eles-item:hover img { transform: scale(1.06); }
+
+  .eu-eles-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(30,46,38,0.75) 0%, transparent 55%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+  }
+
+  .eu-eles-item:hover .eu-eles-overlay { opacity: 1; }
+
+  .eu-eles-overlay span {
+    color: var(--branco);
+    font-family: 'Playfair Display', serif;
+    font-size: 0.9rem;
+    font-style: italic;
+  }
+
+  /* item grande ocupa 2 linhas */
+  .eu-eles-grande {
+    grid-row: span 2;
+  }
+
+  /* bloco de texto no meio do mosaico */
+  .eu-eles-texto-card {
+    background: var(--verde);
+    border-radius: 18px;
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .eu-eles-texto-card .quote-icon {
+    font-size: 2.5rem;
+    line-height: 1;
+    color: var(--dourado-claro);
+    font-family: 'Playfair Display', serif;
+  }
+
+  .eu-eles-frase {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    font-style: italic;
+    color: var(--branco);
+    line-height: 1.6;
+  }
+
+  .eu-eles-assinatura {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.6);
+    font-weight: 300;
+  }
+
+  @media (max-width: 900px) {
+    .eu-eles-mosaico {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(3, 240px);
+    }
+  }
+
+  @media (max-width: 560px) {
+    .eu-eles-mosaico {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, 220px);
+    }
+    .eu-eles-texto-card { min-height: 180px; }
+  }
+
+  /* ========================
+     VÍDEOS — PROCESSO
+  ======================== */
+  .videos-section {
+    background: var(--texto);
+    padding: 100px 8%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .videos-section::before {
+    content: '';
+    position: absolute;
+    top: -120px; right: -120px;
+    width: 500px; height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(45,92,63,0.25) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .videos-header {
+    text-align: center;
+    margin-bottom: 56px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .videos-header .section-label {
+    color: var(--dourado-claro);
+    display: flex;
+    justify-content: center;
+  }
+
+  .videos-header .section-label::before {
+    background: var(--dourado-claro);
+  }
+
+  .videos-header .section-title {
+    color: var(--branco);
+  }
+
+  .videos-header .section-title em {
+    color: var(--dourado-claro);
+  }
+
+  .videos-header .section-desc {
+    color: rgba(255,255,255,0.65);
+    margin: 0 auto;
+    max-width: 520px;
+  }
+
+  /* Player principal + thumbnails */
+  .videos-player-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .video-principal {
+    width: 100%;
+    max-width: 420px;
+    aspect-ratio: 9/16;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    margin: 0 auto 24px;
+  }
+
+  .video-principal video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .video-thumbs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .video-thumb {
+    position: relative;
+    aspect-ratio: 9/16;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.2s, transform 0.2s;
+    background: #111;
+  }
+
+  .video-thumb:hover { transform: translateY(-4px); }
+  .video-thumb.ativo { border-color: var(--dourado); }
+
+  .video-thumb video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    display: block;
+  }
+
+  .video-thumb img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  .video-thumb-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: background 0.2s;
+  }
+
+  .video-thumb:hover .video-thumb-overlay,
+  .video-thumb.ativo .video-thumb-overlay {
+    background: rgba(0,0,0,0.15);
+  }
+
+  .video-play-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    transition: transform 0.2s;
+  }
+
+  .video-thumb:hover .video-play-icon { transform: scale(1.1); }
+  .video-thumb.ativo .video-play-icon { background: var(--dourado); }
+
+  .video-thumb-num {
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.8);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+  }
+
+  @media (max-width: 768px) {
+    .video-thumbs { grid-template-columns: repeat(4, 1fr); gap: 8px; }
+    .video-principal { max-width: 280px; }
+    .videos-section { padding: 70px 6%; }
+  }
+
+  @media (max-width: 480px) {
+    .video-thumbs { grid-template-columns: repeat(4, 1fr); gap: 6px; }
+    .video-principal { max-width: 100%; }
+  }
+  .instagram-section {
+    background: var(--texto);
+    padding: 80px 8%;
+  }
+
+  .instagram-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .instagram-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 28px;
+    background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: opacity 0.2s, transform 0.15s;
+    box-shadow: 0 4px 20px rgba(220,39,67,0.35);
+  }
+
+  .instagram-btn:hover { opacity: 0.9; transform: translateY(-2px); }
+
+  .instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .insta-item {
+    aspect-ratio: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(255,255,255,0.05);
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+  }
+
+  .insta-item:hover { transform: scale(1.04); opacity: 0.85; }
+
+  .insta-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    background: rgba(255,255,255,0.05);
+  }
+
+  @media (max-width: 768px) {
+    .instagram-inner { grid-template-columns: 1fr; gap: 40px; }
+    .instagram-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+  .contato-direto {
+    background: var(--verde);
+    border-radius: 24px;
+    padding: 48px 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 12px 48px rgba(45,92,63,0.2);
+  }
+
+  .contato-direto-icon {
+    font-size: 3rem;
+    margin-bottom: 4px;
+  }
+
+  .contato-direto-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: var(--branco);
+    font-weight: 600;
+  }
+
+  .contato-direto-desc {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.75);
+    font-weight: 300;
+    line-height: 1.7;
+    max-width: 280px;
+  }
+
+  .contato-wa-btn {
+    background: #25D366;
+    color: #fff;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.2s;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    margin-top: 8px;
+  }
+
+  .contato-wa-btn:hover {
+    background: #1ebe5c;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(37,211,102,0.5);
+  }
+
+  .contato-direto-info {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.5);
+    font-weight: 300;
+    margin-top: -4px;
+  }
+
+  /* WHATSAPP MÚLTIPLOS BOTÕES FLUTUANTES */
+  .whatsapp-fixed {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 9999;
+    background: #25D366;
+    color: white;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    text-decoration: none;
+    box-shadow: 0 4px 24px rgba(37,211,102,0.5);
+    transition: transform 0.2s, box-shadow 0.2s;
+    animation: waPulse 2.5s ease-in-out infinite;
+  }
+
+  .whatsapp-fixed:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 34px rgba(37,211,102,0.6);
+    animation: none;
+  }
+
+  .whatsapp-mid {
+    position: fixed;
+    bottom: 50%;
+    right: 20px;
+    transform: translateY(50%);
+    z-index: 9999;
+    background: #25D366;
+    color: white;
+    border-radius: 30px 0 0 30px;
+    padding: 14px 18px 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-family: 'DM Sans', sans-serif;
+    text-decoration: none;
+    box-shadow: -4px 4px 20px rgba(37,211,102,0.35);
+    transition: padding-right 0.2s, box-shadow 0.2s;
+    white-space: nowrap;
+    writing-mode: horizontal-tb;
+  }
+
+  .whatsapp-mid span.wa-label {
+    display: none;
+  }
+
+  .whatsapp-mid:hover span.wa-label {
+    display: inline;
+  }
+
+  .whatsapp-mid:hover {
+    padding-right: 22px;
+    box-shadow: -8px 4px 28px rgba(37,211,102,0.5);
+  }
+
+  @keyframes waPulse {
+    0%, 100% { box-shadow: 0 4px 24px rgba(37,211,102,0.5); }
+    50% { box-shadow: 0 4px 36px rgba(37,211,102,0.8), 0 0 0 8px rgba(37,211,102,0.12); }
+  }
+
+  @media (max-width: 768px) {
+    .whatsapp-mid {
+      display: none;
+    }
+    .contato-direto {
+      padding: 36px 24px;
+    }
+  }
+
+  /* RESPONSIVO */
+  @media (max-width: 768px) {
+    .section {
+      padding: 100px 16px;
+    }
+
+    .hero {
+      grid-template-columns: 1fr;
+      grid-template-rows: 45vh 1fr;
+      height: auto;
+      min-height: 100vh;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    .hero-image-col {
+      height: 45vh;
+      min-height: 300px;
+      order: -1;
+    }
+    .hero-real-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 15%;
+    }
+    .hero-image-col::after {
+      background: linear-gradient(to bottom, transparent 65%, var(--creme) 100%);
+    }
+    .hero-content {
+      padding: 32px 6% 60px;
+    }
+    .hero-stats {
+      gap: 20px;
+    }
+    .trajetoria-section {
+      grid-template-columns: 1fr;
+      padding: 60px 6%;
+    }
+    .trajetoria-image {
+      min-height: 240px;
+    }
+    .diferenciais-grid {
+      grid-template-columns: 1fr;
+    }
+    .section {
+      padding: 70px 6%;
+    }
+    footer {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Dra. Viviane<span> vet</span></div>
+  <div class="nav-links">
+    <a href="#servicos" class="nav-link">Serviços</a>
+    <a href="#sobre" class="nav-link">Sobre</a>
+    <a href="#casos" class="nav-link">Casos</a>
+    <a href="#videos" class="nav-link">Vídeos</a>
+    <a href="#eu-eles" class="nav-link">Eu & Eles</a>
+    <a href="#faq" class="nav-link">FAQ</a>
+    <a href="#contato" class="nav-link">Contato</a>
+  </div>
+  <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Viviane!%20Quero%20saber%20mais%20sobre%20acupuntura%20veterinária." class="nav-cta" target="_blank">Agendar consulta →</a>
+  <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MENU MOBILE -->
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="#servicos" class="nav-mobile-link" onclick="closeMenu()">🌿 Serviços</a>
+  <a href="#sobre" class="nav-mobile-link" onclick="closeMenu()">👩‍⚕️ Sobre a Dra. Viviane</a>
+  <a href="#casos" class="nav-mobile-link" onclick="closeMenu()">🐾 Casos de Sucesso</a>
+  <a href="#videos" class="nav-mobile-link" onclick="closeMenu()">🎬 Vídeos do Processo</a>
+  <a href="#eu-eles" class="nav-mobile-link" onclick="closeMenu()">❤️ Eu & Eles</a>
+  <a href="#faq" class="nav-mobile-link" onclick="closeMenu()">❓ Perguntas Frequentes</a>
+  <a href="#contato" class="nav-mobile-link" onclick="closeMenu()">📍 Contato & Localização</a>
+  <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Viviane!%20Quero%20agendar%20uma%20consulta." class="nav-mobile-wa" target="_blank" onclick="closeMenu()">
+    💬 Agendar pelo WhatsApp
+  </a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">Médica Veterinária Clínica · Acupunturista · Terapeuta Integrativa</div>
+
+    <h1 class="hero-title">
+      Tratamento que vai além<br>
+      do <em>sintoma</em>
+    </h1>
+
+    <p class="hero-sub">
+      Consultas clínicas, acompanhamento de pacientes crônicos, fluidoterapia e acupuntura veterinária — em consultório ou no domicílio. Seu animal tratado com ciência, sensibilidade e cuidado real.
+    </p>
+
+    <p class="hero-note">
+      🏠 <strong>Atendimento clínico e domiciliar</strong> — consultas, fluidoterapia, acupuntura e acompanhamento contínuo para pacientes crônicos.
+    </p>
+
+    <p class="hero-institucional">
+      Medicina Veterinária Clínica, Acupuntura Veterinária, Terapias Integrativas, Fluidoterapia e Atendimento Domiciliar para cães e gatos.
+    </p>
+
+    <div class="hero-ctas">
+      <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Viviane!%20Quero%20agendar%20uma%20consulta." class="btn-primary" target="_blank">
+        💬 Falar com a Dra. Viviane
+      </a>
+      <a href="#servicos" class="btn-secondary">
+        Ver serviços ↓
+      </a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">+30</span>
+        <span class="stat-label">anos de experiência</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">4</span>
+        <span class="stat-label">pós-graduações</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">3</span>
+        <span class="stat-label">especialidades</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-image-col">
+    <img src="perfil_1.jpeg" alt="Dra. Viviane" class="hero-real-img">
+  </div>
+</section>
+
+<!-- PARA QUEM É -->
+<section class="section-para-quem">
+  <p class="para-quem-quote">
+    "Aquele tutor que realmente vê o seu animal como algo especial — como uma alma a ser respeitada e cuidada — é exatamente quem eu quero atender."
+  </p>
+  <p class="para-quem-detalhe">
+    Dra. Viviane | Médica Veterinária Clínica & Acupunturista Veterinária
+  </p>
+  <div class="para-quem-atendimento">
+    <h3>📍 Atendimento Domiciliar</h3>
+    <p>Levamos toda segurança e profissionalismo até você. Ideal para pacientes estressados com transporte, idosos ou que precisam de acompanhamento em casa.</p>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section class="section servicos-section" id="servicos">
+  <div class="servicos-header reveal">
+    <div class="section-label">O que ofereço</div>
+    <h2 class="section-title">Terapias integradas<br>para o bem-estar do <em>seu animal</em></h2>
+    <p class="section-desc">Médica Veterinária Clínica com atendimento presencial e domiciliar. ✓ Protocolos integrativos para resultado mais seguro, tutor mais confiante e cuidado total com seu animal. Todos os serviços disponíveis em consultório ou na sua casa.</p>
+  </div>
+
+  <div class="servicos-grid">
+
+    <div class="servico-card reveal">
+  <div class="servico-icon servico-icon-foto">
+    <img src="1.png" 
+         alt="Acupuntura Tradicional" 
+         class="servico-foto">
+  </div><div class="servico-nome">Acupuntura Tradicional</div>
+      <p class="servico-desc">Agulhamento em pontos estratégicos baseados na Medicina Tradicional Chinesa para reequilíbrio energético, controle de dor e estímulo à cura natural.</p>
+      <span class="servico-tag">Base do tratamento</span>
+    </div>
+
+    <div class="servico-card reveal">
+  <div class="servico-icon servico-icon-foto">
+    <img src="2.png" 
+         alt="Moxabustão" 
+         class="servico-foto">
+  </div>
+      <div class="servico-nome">Moxabustão</div>
+      <p class="servico-desc">Aplicação de calor em pontos específicos com erva artemísia — potencializa o agulhamento e é especialmente eficaz no fortalecimento do sistema osteomuscular e imunidade.</p>
+      <span class="servico-tag">Calor terapêutico</span>
+    </div>
+
+    
+<div class="servico-card reveal">
+  <div class="servico-icon servico-icon-foto">
+    <img src="3.png" 
+         alt="Farmacopuntura" 
+         class="servico-foto">
+  </div>
+      <div class="servico-nome">Farmacopuntura</div>
+      <p class="servico-desc">Aplicação de fármacos específicos diretamente nos pontos de acupuntura — potencializa a ação do tratamento. Indicado para anemias renais (eritropoetina), controle de dor intensa e protocolos personalizados.</p>
+      <span class="servico-tag">Diferencial exclusivo</span>
+    </div>
+
+    
+<div class="servico-card reveal">
+  <div class="servico-icon servico-icon-foto">
+    <img src="4.png" 
+         alt="Implante de Catgut" 
+         class="servico-foto">
+  </div>
+       <div class="servico-nome">Implante de Catgut</div>
+      <p class="servico-desc">Fio de sutura absorvível inserido nos pontos de acupuntura — age por 30 dias contínuos. Ideal para pacientes de outras cidades ou animais muito estressados com transporte frequente.</p>
+      <span class="servico-tag">Protocolo mensal</span>
+    </div>
+
+    
+<div class="servico-card reveal">
+  <div class="servico-icon servico-icon-foto">
+    <img src="5.png" 
+         alt="Cromoterapia" 
+         class="servico-foto">
+  </div>
+       <div class="servico-nome">Cromoterapia</div>
+      <p class="servico-desc">Uso de cores e frequências de luz associadas à acupuntura para tratamentos complementares — especialmente eficaz em animais mais sensíveis e idosos.</p>
+      <span class="servico-tag">Terapia complementar</span>
+    </div>
+
+<div class="servico-card reveal">
+  <div class="servico-icon servico-icon-foto">
+    <img src="6.png" 
+         alt="Laserterapia" 
+         class="servico-foto">
+  </div>
+  <div class="servico-nome">Laserterapia</div>
+  <p class="servico-desc">
+    Laser de baixa intensidade aplicado aos pontos de acupuntura ou áreas lesionadas — acelera a cicatrização, reduz inflamação e proporciona analgesia sem efeitos colaterais.
+  </p>
+  <span class="servico-tag">Alta tecnologia</span>
+</div>
+
+    <div class="servico-card reveal">
+  <div class="servico-icon servico-icon-foto">
+    <img src="7.png" 
+         alt="Fluidoterapia Felina" 
+         class="servico-foto">
+  </div>
+      <div class="servico-nome">Fluidoterapia Felina</div>
+      <p class="servico-desc">Soro subcutâneo personalizado para felinos com DRC, associado à acupuntura para manter hidratação, aliviar rins e reforçar recuperação sem estresse.</p>
+      <span class="servico-tag">Mais buscado</span>
+    </div>
+
+    <div class="servico-card reveal" style="background: linear-gradient(135deg, rgba(45,92,63,0.1) 0%, rgba(201,168,76,0.1) 100%); border: 2px solid var(--dourado); min-height: 100%; display: flex; flex-direction: column; justify-content: center; padding: 32px 24px;">
+      <div class="servico-icon" style="font-size: 2.5rem; margin-bottom: 16px;">📍</div>
+      <div class="servico-nome" style="color: var(--dourado); font-weight: 600;">Atendimento Domiciliar</div>
+      <p class="servico-desc">Todos os serviços disponíveis em sua casa. Ideal para pacientes que se estressam com transporte, idosos, animais em recuperação ou quem busca maior conforto e tranquilidade para seu pet.</p>
+      <span class="servico-tag" style="background: var(--dourado); color: var(--verde);">Disponível</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- FLUIDOTERAPIA -->
+<section class="section fluidoterapia-section" id="fluidoterapia">
+  <div class="fluidoterapia-grid">
+    <div class="fluidoterapia-copy reveal">
+      <div class="section-label">FLUIDOTERAPIA FELINA</div>
+      <h2 class="section-title">Cuidado especializado para gatos com <em>Doença Renal Crônica</em></h2>
+      <p class="section-desc">A doença renal crônica (DRC) é uma das condições mais comuns em gatos idosos. A fluidoterapia subcutânea, associada à acupuntura veterinária, é hoje um dos protocolos mais eficazes para manter a qualidade de vida desses pacientes — com conforto, sem estresse e com acompanhamento contínuo.</p>
+      <div class="fluidoterapia-features">
+        <div class="feature-card">
+          <strong>🐱 Doença Renal Crônica Felina</strong>
+          <p>A DRC acomete especialmente gatos a partir dos 7 anos. A Dra. Viviane acompanha esses pacientes com diagnóstico clínico detalhado, monitoramento evolutivo e protocolos adaptados a cada estágio da doença.</p>
+        </div>
+        <div class="feature-card">
+          <strong>💧 Fluidoterapia Subcutânea</strong>
+          <p>Aplicação de soro fisiológico ou Ringer lactato sob a pele do gatinho — suave, rápida e de baixo estresse. Repõe líquidos, alivia a sobrecarga renal e melhora o bem-estar em poucas sessões. Disponível em clínica ou no domicílio.</p>
+        </div>
+        <div class="feature-card">
+          <strong>🪡 Associação com Acupuntura</strong>
+          <p>A combinação de fluidoterapia e acupuntura veterinária potencializa os resultados: a acupuntura estimula pontos renais e de vitalidade, reduz náuseas, melhora o apetite e estabiliza a energia vital — tornando cada sessão de fluido muito mais eficaz.</p>
+        </div>
+        <div class="feature-card">
+          <strong>🌟 Qualidade de Vida para Gatos Idosos</strong>
+          <p>Mais que tratar a doença — o objetivo é preservar o conforto e a alegria de viver. Com este protocolo integrado, gatos com DRC ganham mais disposição, melhor hidratação, apetite restabelecido e uma velhice digna ao lado de quem amam.</p>
+        </div>
+      </div>
+    </div>
+    <div class="fluidoterapia-image reveal">
+      <img src="renal.jpeg" alt="Gato recebendo fluidoterapia subcutânea" />
+    </div>
+  </div>
+</section>
+
+<!-- TRAJETÓRIA -->
+<section class="section trajetoria-section" id="sobre">
+  <div class="trajetoria-image reveal">
+   <img src="laser.jpeg" alt="Dra. Viviane com instrumento de acupuntura" style="width:100%;height:auto;display:block;border-radius:24px;">
+  </div>
+
+  <div>
+    <div class="section-label reveal">Quem sou eu</div>
+    <h2 class="section-title reveal">Médica Veterinária Clínica,<br>Acupunturista e <em>Terapeuta Integrativa</em></h2>
+
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">🧠</div>
+        <div class="timeline-content">
+          <div class="timeline-ano">Desde os anos 80</div>
+          <div class="timeline-titulo">Psicóloga e Educadora</div>
+          <p class="timeline-desc">Formada em Psicologia em 1996, com magistério, psicopedagogia e pós-graduações na área educacional. Décadas dedicadas ao desenvolvimento humano.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">🐾</div>
+        <div class="timeline-content">
+          <div class="timeline-ano">2013</div>
+          <div class="timeline-titulo">Médica Veterinária Clínica</div>
+          <p class="timeline-desc">Formada em veterinária com pós-graduação em Clínica de Pequenos Animais. Realiza consultas clínicas, diagnóstico, fluidoterapia subcutânea e acompanhamento de pacientes crônicos — especialmente felinos com doença renal.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">🪡</div>
+        <div class="timeline-content">
+          <div class="timeline-ano">Atualidade</div>
+          <div class="timeline-titulo">Acupunturista Veterinária & Terapeuta Integrativa</div>
+          <p class="timeline-desc">Finalizando pós-graduação em Acupuntura Veterinária e se dedicando integralmente às terapias integrativas — unindo clínica convencional, acupuntura, fluidoterapia e atendimento domiciliar para oferecer cuidado completo ao paciente e conforto ao tutor.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIAIS -->
+<section class="section diferenciais-section" id="diferenciais">
+  <div class="section-label reveal">Por que escolher</div>
+  <h2 class="section-title reveal">O que me faz <em>diferente</em></h2>
+  <p class="section-desc reveal">Não sou uma profissional que começou ontem. São décadas de formação, experiência clínica real e um olhar integrativo único.</p>
+
+  <div class="diferenciais-grid">
+
+    <div class="diferencial-card reveal">
+      <div class="diferencial-num">01</div>
+      <div class="diferencial-body">
+        <div class="diferencial-titulo">Tratamento da causa, não do sintoma</div>
+        <p class="diferencial-desc">A acupuntura reequilibra o organismo de dentro para fora — sem sobrecarregar rins, fígado e sistema digestivo com medicação excessiva.</p>
+      </div>
+    </div>
+
+    <div class="diferencial-card reveal">
+      <div class="diferencial-num">02</div>
+      <div class="diferencial-body">
+        <div class="diferencial-titulo">Protocolo 100% individualizado</div>
+        <p class="diferencial-desc">A primeira consulta é para conhecer seu animal com profundidade. Só depois defino o tratamento — porque cada caso é único.</p>
+      </div>
+    </div>
+
+    <div class="diferencial-card reveal">
+      <div class="diferencial-num">03</div>
+      <div class="diferencial-body">
+        <div class="diferencial-titulo">Atende pacientes de outras cidades</div>
+        <p class="diferencial-desc">Com catgut e farmacopuntura, é possível fazer protocolos mensais — ótimo para tutores que viajam muito ou animais estressados com transporte frequente.</p>
+      </div>
+    </div>
+
+    <div class="diferencial-card reveal">
+      <div class="diferencial-num">04</div>
+      <div class="diferencial-body">
+        <div class="diferencial-titulo">Formação multidisciplinar única</div>
+        <p class="diferencial-desc">Psicologia + Veterinária + Acupuntura. Um olhar que enxerga o animal e o tutor como parte do mesmo processo de cura.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CASOS DE SUCESSO -->
+<section class="section casos-section" id="casos">
+  <div class="casos-header">
+    <div class="section-label reveal">Resultados reais</div>
+    <h2 class="section-title reveal">Histórias que <em>emocionam</em></h2>
+    <p class="section-desc reveal">Casos acompanhados com dedicação, paciência e uma ciência que funciona.</p>
+  </div>
+
+  <!-- NICOLAS: ANTES E DEPOIS em destaque -->
+  <div class="caso-destaque reveal">
+    <div class="caso-destaque-tag">⭐ Caso em Destaque</div>
+    <div class="caso-destaque-nome">Nicolas — Cervicalgia Severa</div>
+    <p class="caso-destaque-desc">Chegou com o nariz completamente amassado de dor — a contratura cervical era tão intensa que parecia um tumor. Após 8+ sessões de acupuntura e moxabustão, a recuperação foi progressiva e visível.</p>
+    <div class="antes-depois">
+      <div class="ad-col">
+        <div class="ad-label ad-antes">Antes</div>
+        <div class="ad-foto-wrap">
+          <img src="nicolas-agulhas.jpeg" alt="Nicolas durante acupuntura" class="ad-foto">
+        </div>
+        <p class="ad-texto">Dor intensa, contratura cervical severa, nariz amassado pela tensão muscular</p>
+      </div>
+      <div class="ad-seta">→</div>
+      <div class="ad-col">
+        <div class="ad-label ad-depois">Depois</div>
+        <div class="ad-foto-wrap">
+          <img src="nicolas-pata.jpeg" alt="Nicolas pós-tratamento" class="ad-foto">
+        </div>
+        <p class="ad-texto">Mobilidade recuperada, nariz no normal, coordenação dos membros restabelecida</p>
+      </div>
+    </div>
+    <span class="caso-badge" style="font-size:0.85rem;padding:6px 18px">✅ Recuperação progressiva · 8+ sessões</span>
+  </div>
+
+  <div class="casos-grid">
+
+    <div class="caso-card reveal">
+      <div class="caso-foto-wrap">
+        <img src="gata-alívio-dor.jpeg" alt="Gata relaxando durante acupuntura" class="caso-foto">
+      </div>
+      <div class="caso-nome">Hebe</div>
+      <div class="caso-condicao">18 anos · Controle de dor e prevenção neurológica</div>
+      <p class="caso-resultado">Senhorinha de 18 anos com tratamento contínuo para qualidade de vida na terceira idade — controle de dor, prevenção neurológica e bem-estar geral.</p>
+      <span class="caso-badge">Qualidade de vida na velhice</span>
+    </div>
+
+    <div class="caso-card reveal">
+      <div class="caso-foto-wrap">
+        <img src="fifi.jpeg" alt="Fifi sendo atendida dentro da mochila" class="caso-foto">
+      </div>
+      <div class="caso-nome">Fifi</div>
+      <div class="caso-condicao">Dor intensa + estresse · Idosa · Só aceita sessão na mochila 😄</div>
+      <p class="caso-resultado">Chegou toda rígida de dor e estresse. Em 20 minutos de sessão foi relaxando até adormecer. Resultado visível na mesma sessão.</p>
+      <span class="caso-badge">Alívio na 1ª sessão</span>
+    </div>
+
+    <div class="caso-card reveal">
+      <div class="caso-foto-wrap">
+        <img src="displasia.jpeg" alt="Cão com displasia coxofemoral" class="caso-foto">
+      </div>
+      <div class="caso-nome">Displasia Coxofemoral</div>
+      <div class="caso-condicao">Doença comum em cães de grande porte</div>
+      <p class="caso-resultado">Acupuntura, farmacopuntura e laserterapia combinados — redução expressiva da dor e melhora na mobilidade, sem sobrecarga medicamentosa.</p>
+      <span class="caso-badge">Protocolo especializado</span>
+    </div>
+
+    <div class="caso-card reveal">
+      <div class="caso-foto-wrap">
+        <img src="renal.jpeg" alt="Tratamento renal em felino" class="caso-foto">
+      </div>
+      <div class="caso-nome">Gatos Renais</div>
+      <div class="caso-condicao">Insuficiência renal + anemia</div>
+      <p class="caso-resultado">Farmacopuntura com eritropoetina e fluido subcutâneo em pontos específicos — prolonga e melhora muito a qualidade de vida em felinos com doença renal crônica.</p>
+      <span class="caso-badge">Protocolo especializado</span>
+    </div>
+
+    <div class="caso-card reveal">
+      <div class="caso-foto-wrap">
+        <img src="filhotinho.jpeg" alt="Filhote em atendimento" class="caso-foto">
+      </div>
+      <div class="caso-nome">Filhotes</div>
+      <div class="caso-condicao">Cuidado preventivo desde cedo</div>
+      <p class="caso-resultado">A acupuntura não é só para animais doentes — o acompanhamento preventivo desde jovem fortalece o sistema imunológico e o desenvolvimento saudável.</p>
+      <span class="caso-badge">Prevenção e saúde</span>
+    </div>
+
+    <div class="caso-card reveal">
+      <div class="caso-foto-wrap">
+        <img src="ela_com_o_cao_2.jpeg" alt="Dra. Viviane com cão branco" class="caso-foto">
+      </div>
+      <div class="caso-nome">Cães de Médio e Grande Porte</div>
+      <div class="caso-condicao">Dor articular · Pós-cirúrgico · Reabilitação</div>
+      <p class="caso-resultado">Raças grandes têm alta predisposição a doenças articulares. A acupuntura associada à laserterapia oferece alívio rápido e duradouro sem comprometer órgãos vitais.</p>
+      <span class="caso-badge">Reabilitação completa</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- VÍDEOS DO PROCESSO -->
+<section class="videos-section" id="videos">
+  <div class="videos-header">
+    <div class="section-label reveal">Veja na prática</div>
+    <h2 class="section-title reveal">O processo em <em>vídeo real</em></h2>
+    <p class="section-desc reveal">Atendimentos em consultório e <strong>domicílio</strong> — veja como a Dra. Viviane trabalha com cada animal, trazendo segurança, profissionalismo e conforto onde você estiver.</p>
+    <p class="section-desc reveal">Acompanhe momentos reais de atendimento — como a acupuntura age no corpo do animal e a transformação que acontece durante a sessão.</p>
+  </div>
+
+  <div class="videos-player-wrap">
+
+    <!-- Player principal: só carrega ao clicar -->
+    <div class="video-principal" id="videoPrincipalWrap">
+      <div id="videoPlaceholder" style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:#111;border-radius:20px;cursor:pointer;" onclick="iniciarVideo('processo.mp4', document.querySelector('.video-thumb'))">
+        <div style="text-align:center">
+          <div style="width:72px;height:72px;border-radius:50%;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto 14px;border:2px solid rgba(255,255,255,0.3);">▶</div>
+          <p style="color:rgba(255,255,255,0.6);font-size:0.9rem;font-weight:300;">Clique em um vídeo para reproduzir</p>
+        </div>
+      </div>
+      <video id="videoPrincipal" controls muted playsinline style="display:none;width:100%;height:100%;object-fit:cover;border-radius:20px;"></video>
+    </div>
+
+    <div class="video-info" style="max-width:720px;margin:18px auto 0;color:rgba(0,0,0,0.76);font-size:0.95rem;line-height:1.6;text-align:center;">
+      <p id="videoInfoTitle" style="font-weight:600;margin-bottom:6px;color:var(--verde);">Clique em um vídeo para ver detalhes</p>
+      <p id="videoInfoDesc" style="margin:0;color:var(--texto-suave);font-weight:300;">Veja o processo real de atendimento, incluindo acupuntura, fluidoterapia e cuidados integrativos.</p>
+    </div>
+
+    <div class="video-thumbs">
+      <div class="video-thumb" data-title="Processo de acupuntura" data-desc="Vídeo inicial com animal em atendimento e explicação do protocolo." onclick="iniciarVideo('processo.mp4', this)">
+        <video src="processo.mp4" preload="metadata" muted playsinline style="width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
+        <div class="video-thumb-overlay">
+          <div class="video-play-icon">▶</div>
+          <span class="video-thumb-num">Vídeo 1</span>
+        </div>
+      </div>
+      <div class="video-thumb" data-title="Sessão de acupuntura" data-desc="Atendimento com foco em relaxamento e alívio de tensão muscular." onclick="iniciarVideo('processo1.mp4', this)">
+        <video src="processo1.mp4" preload="metadata" muted playsinline style="width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
+        <div class="video-thumb-overlay">
+          <div class="video-play-icon">▶</div>
+          <span class="video-thumb-num">Vídeo 2</span>
+        </div>
+      </div>
+      <div class="video-thumb" data-title="Atendimento em gato" data-desc="Caso real com acompanhamento de sinais vitais e conforto do paciente felino." onclick="iniciarVideo('processo2.mp4', this)">
+        <video src="processo2.mp4" preload="metadata" muted playsinline style="width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
+        <div class="video-thumb-overlay">
+          <div class="video-play-icon">▶</div>
+          <span class="video-thumb-num">Vídeo 3</span>
+        </div>
+      </div>
+      <div class="video-thumb" data-title="Atendimento em cão" data-desc="Tratamento complementar com foco em controle de dor e bem-estar." onclick="iniciarVideo('processo3.mp4', this)">
+        <video src="processo3.mp4" preload="metadata" muted playsinline style="width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
+        <div class="video-thumb-overlay">
+          <div class="video-play-icon">▶</div>
+          <span class="video-thumb-num">Vídeo 4</span>
+        </div>
+      </div>
+      <div class="video-thumb" data-title="Rottweiler (Neném)" data-desc="Tratamento com acupuntura para o Rottweiler Neném." onclick="iniciarVideo('processo4.mp4', this)">
+        <video src="processo4.mp4" preload="metadata" muted playsinline style="width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
+        <div class="video-thumb-overlay">
+          <div class="video-play-icon">▶</div>
+          <span class="video-thumb-num">Vídeo 5</span>
+        </div>
+      </div>
+      <div class="video-thumb" data-title="Anemia por hemoparasitose" data-desc="Foco em anemia causada por hemoparasitose (doença do carrapato)." onclick="iniciarVideo('processo5.mp4', this)">
+        <video src="processo5.mp4" preload="metadata" muted playsinline style="width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
+        <div class="video-thumb-overlay">
+          <div class="video-play-icon">▶</div>
+          <span class="video-thumb-num">Vídeo 6</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FILOSOFIA -->
+<section class="filosofia-section">
+  <p class="filosofia-quote reveal">
+    "Você pode só dar um remédio para tirar a dor — mas aí vai dando remédio, remédio, remédio, quando vê o animal está com o rim comprometido, com o fígado, com gastrite... A acupuntura consegue mexer com toda essa questão de energia sem esses efeitos."
+  </p>
+  <p class="filosofia-atrib reveal">— Dra. Viviane</p>
+
+  <div class="filosofia-cards">
+
+    <div class="filosofia-card reveal">
+      <div class="filosofia-card-icon">🌿</div>
+      <div class="filosofia-card-text">
+        <strong>Sem sobrecarga medicamentosa</strong>
+        Quando possível, menos remédio e mais equilíbrio.
+      </div>
+    </div>
+
+    <div class="filosofia-card reveal">
+      <div class="filosofia-card-icon">❤️</div>
+      <div class="filosofia-card-text">
+        <strong>Seu animal como alma</strong>
+        Não como objeto — como presença especial que merece cuidado real.
+      </div>
+    </div>
+
+    <div class="filosofia-card reveal">
+      <div class="filosofia-card-icon">🎯</div>
+      <div class="filosofia-card-text">
+        <strong>Ciência com sensibilidade</strong>
+        Medicina Tradicional Chinesa com rigor veterinário e olhar humano.
+      </div>
+    </div>
+
+    <div class="filosofia-card reveal">
+      <div class="filosofia-card-icon">📍</div>
+      <div class="filosofia-card-text">
+        <strong>Cada caso é único</strong>
+        Nenhum protocolo genérico. Sempre personalizado.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section class="galeria-section">
+  <div class="section-label reveal" style="justify-content:center">Momentos reais</div>
+  <h2 class="section-title reveal" style="text-align:center">O cuidado que você <em>vai ver</em></h2>
+  <p class="section-desc reveal" style="text-align:center;margin:0 auto 48px">Cada foto é um momento real de atendimento — a relação entre a Dra. Viviane e seus pacientes fala por si.</p>
+
+  <div class="galeria-grid">
+    <div class="galeria-item reveal">
+      <img src="ela_com_gato_preto.jpeg" alt="Dra. Viviane com gato preto">
+      <div class="galeria-overlay"><span>O vínculo começa antes da agulha</span></div>
+    </div>
+    <div class="galeria-item reveal">
+      <img src="ela_com_o_cao_2.jpeg" alt="Dra. Viviane com cão branco">
+      <div class="galeria-overlay"><span>Presença que acalma</span></div>
+    </div>
+    <div class="galeria-item reveal">
+      <img src="ela_com_gato_2.jpeg" alt="Dra. Viviane com gato no consultório">
+      <div class="galeria-overlay"><span>Cuidado que vai além</span></div>
+    </div>
+    <div class="galeria-item reveal">
+      <img src="filhotinho.jpeg" alt="Dra. Viviane com filhote">
+      <div class="galeria-overlay"><span>De filhotes a idosos</span></div>
+    </div>
+
+    <div class="galeria-item reveal">
+      <img src="fifi.jpeg" alt="Fifi na mochila em atendimento">
+      <div class="galeria-overlay"><span>Cada animal no seu tempo</span></div>
+    </div>
+        <div class="galeria-item reveal">
+      <img src="ela1.jpeg" alt="Fifi na mochila em atendimento">
+      <div class="galeria-overlay"><span>Cada animal no seu tempo</span></div>
+    </div>
+        <div class="galeria-item reveal">
+      <img src="ela2.jpeg" alt="Fifi na mochila em atendimento">
+      <div class="galeria-overlay"><span>Cada animal no seu tempo</span></div>
+    </div>
+        <div class="galeria-item reveal">
+      <img src="ela3.jpeg" alt="Fifi na mochila em atendimento">
+      <div class="galeria-overlay"><span>Cada animal no seu tempo</span></div>
+    </div>
+        <div class="galeria-item reveal">
+      <img src="ela4.jpeg" alt="Fifi na mochila em atendimento">
+      <div class="galeria-overlay"><span>Cada animal no seu tempo</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- EU E ELES -->
+<section class="eu-eles-section" id="eu-eles">
+  <div class="eu-eles-header">
+    <div class="section-label reveal">Uma relação de amor</div>
+    <h2 class="section-title reveal">Eu <em>&</em> Eles</h2>
+    <p class="section-desc reveal">Mais do que uma veterinária — uma pessoa que realmente sente pelos animais. Cada paciente deixa uma marca.</p>
+  </div>
+
+  <div class="eu-eles-mosaico reveal">
+
+    <div class="eu-eles-item">
+      <img src="ela_com_gato_preto.jpeg" alt="Dra. Viviane com gato preto" style="object-position: center 20%;">
+      <div class="eu-eles-overlay"><span>O vínculo que cura começa aqui</span></div>
+    </div>
+
+    <div class="eu-eles-item">
+      <img src="ela_com_o_cao.jpeg" alt="Dra. Viviane com cão" style="object-position: center 30%;">
+      <div class="eu-eles-overlay"><span>Presença que acalma</span></div>
+    </div>
+
+    <div class="eu-eles-item">
+      <img src="ela_com_o_cao_2.jpeg" alt="Dra. Viviane com cão branco" style="object-position: center top;">
+      <div class="eu-eles-overlay"><span>Cada animal tem sua linguagem</span></div>
+    </div>
+
+    <div class="eu-eles-item">
+      <img src="ela_com_gato_2.jpeg" alt="Dra. Viviane com gato" style="object-position: center top;">
+      <div class="eu-eles-overlay"><span>Confiança construída sessão a sessão</span></div>
+    </div>
+
+    <div class="eu-eles-item">
+      <img src="ela_com_gato_3.jpeg" alt="Dra. Viviane com gato preto e branco" style="object-position: center top;">
+      <div class="eu-eles-overlay"><span>Cuidado que vai além da técnica</span></div>
+    </div>
+
+    <div class="eu-eles-item">
+      <img src="fifi.jpeg" alt="Fifi na mochila em atendimento" style="object-position: center center;">
+      <div class="eu-eles-overlay"><span>Cada animal no seu tempo</span></div>
+    </div>
+
+  </div>
+
+  <!-- Frase final -->
+  <div style="text-align:center;max-width:640px;margin:0 auto" class="reveal">
+    <p style="font-family:'Playfair Display',serif;font-size:1.15rem;font-style:italic;color:var(--verde);line-height:1.7;">"Trago comigo mais de 30 anos de amor pelos animais — e uma carreira inteira construída para cuidar deles da forma que eles merecem."</p>
+    <p style="margin-top:14px;font-size:0.85rem;color:var(--texto-suave);font-weight:300;">— Dra. Viviane · Médica Veterinária & Acupunturista</p>
+    <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Viviane!%20Vi%20as%20fotos%20e%20vídeos%20do%20site%20e%20quero%20agendar%20uma%20consulta." target="_blank" class="btn-primary" style="margin-top:32px;display:inline-flex;">
+      💬 Quero esse cuidado para o meu pet
+    </a>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="section depoimentos-section" id="depoimentos">
+  <div class="depoimentos-header">
+    <div class="section-label reveal">O que dizem os tutores</div>
+    <h2 class="section-title reveal">Palavras de quem <em>viveu</em> na prática</h2>
+    <p class="section-desc reveal">Cada depoimento é uma história real de cuidado, dedicação e resultado.</p>
+  </div>
+
+  <div class="depoimentos-carousel-wrap">
+  <div class="depoimentos-grid" id="depCarousel">
+
+    <div class="depoimento-card reveal">
+      <div class="depoimento-estrelas">★★★★★</div>
+      <p class="depoimento-texto">"Minha gata Hebe tem 18 anos e chegou com muito desconforto. Depois de poucos meses de sessões com a Dra. Viviane, a melhora foi nítida — ela voltou a se movimentar com leveza e ficou muito mais tranquila. Só gratidão."</p>
+      <div class="depoimento-autor">
+        <div class="depoimento-avatar">M</div>
+        <div>
+          <div class="depoimento-nome">Márcia R.</div>
+          <div class="depoimento-pet">Tutora da Hebe · 18 anos</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="depoimento-card reveal">
+      <div class="depoimento-estrelas">★★★★★</div>
+      <p class="depoimento-texto">"O Nicolas chegou com cervicalgia severa, parecia que estava com um tumor no rosto de tanto contorcer. Depois de 8 sessões, o nariz voltou completamente ao normal. A Dra. Viviane foi incrivelmente atenciosa e paciente com ele."</p>
+      <div class="depoimento-autor">
+        <div class="depoimento-avatar">F</div>
+        <div>
+          <div class="depoimento-nome">Fernanda P.</div>
+          <div class="depoimento-pet">Tutora do Nicolas · Golden Retriever</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="depoimento-card reveal">
+      <div class="depoimento-estrelas">★★★★★</div>
+      <p class="depoimento-texto">"Meu gato tem insuficiência renal crônica. A Dra. Viviane criou um protocolo com farmacopuntura que mudou completamente a qualidade de vida dele. Ela explica tudo com cuidado, a gente sai da sessão confiante."</p>
+      <div class="depoimento-autor">
+        <div class="depoimento-avatar">R</div>
+        <div>
+          <div class="depoimento-nome">Ricardo S.</div>
+          <div class="depoimento-pet">Tutor do Simba · Gato persa</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="depoimento-card reveal">
+      <div class="depoimento-estrelas">★★★★★</div>
+      <p class="depoimento-texto">"Minha cachorra estava muito agitada e com dores após uma cirurgia. Na primeira sessão de acupuntura com a Dra. Viviane ela já adormeceu durante o atendimento. Resultado visível na hora. Recomendo de olhos fechados."</p>
+      <div class="depoimento-autor">
+        <div class="depoimento-avatar">A</div>
+        <div>
+          <div class="depoimento-nome">Ana Carolina M.</div>
+          <div class="depoimento-pet">Tutora da Luna · Labrador</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="depoimento-card reveal">
+      <div class="depoimento-estrelas">★★★★★</div>
+      <p class="depoimento-texto">"O Toddy tem 14 anos e estava com muita dificuldade pra se levantar. Depois de 6 sessões com a Dra. Viviane ele voltou a subir no sofá sozinho. Fiquei emocionada de ver meu companheiro de vida se movendo assim de novo."</p>
+      <div class="depoimento-autor">
+        <div class="depoimento-avatar">P</div>
+        <div>
+          <div class="depoimento-nome">Patrícia L.</div>
+          <div class="depoimento-pet">Tutora do Toddy · Poodle 14 anos</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="depoimento-card reveal">
+      <div class="depoimento-estrelas">★★★★★</div>
+      <p class="depoimento-texto">"Meu gato Kiko teve AVC e ficou com sequelas neurológicas. A Dra. Viviane foi a única que me deu esperança e um plano concreto. Com acupuntura e laserterapia ele recuperou boa parte dos movimentos. Ela cuida com a alma."</p>
+      <div class="depoimento-autor">
+        <div class="depoimento-avatar">T</div>
+        <div>
+          <div class="depoimento-nome">Tatiane B.</div>
+          <div class="depoimento-pet">Tutora do Kiko · Gato SRD</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="depoimento-card reveal">
+      <div class="depoimento-estrelas">★★★★★</div>
+      <p class="depoimento-texto">"Levei minha Bella com hérnia de disco e muita dor. Depois das sessões ela parou de gemer à noite e voltou a brincar. A Dra. Viviane sempre explica o que está fazendo, transmite muita segurança. Profissional excepcional."</p>
+      <div class="depoimento-autor">
+        <div class="depoimento-avatar">C</div>
+        <div>
+          <div class="depoimento-nome">Camila F.</div>
+          <div class="depoimento-pet">Tutora da Bella · Dachshund</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="depoimento-card reveal">
+      <div class="depoimento-estrelas">★★★★★</div>
+      <p class="depoimento-texto">"Meu cachorro tinha crises de ansiedade severas — destruía tudo e mal conseguia comer. Com a acupuntura ficou muito mais equilibrado. Eu não acreditava muito no início, mas os resultados me convenceram completamente."</p>
+      <div class="depoimento-autor">
+        <div class="depoimento-avatar">G</div>
+        <div>
+          <div class="depoimento-nome">Gustavo M.</div>
+          <div class="depoimento-pet">Tutor do Thor · Border Collie</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="depoimento-card reveal">
+      <div class="depoimento-estrelas">★★★★★</div>
+      <p class="depoimento-texto">"A Dra. Viviane tem uma sensibilidade única. Minha gata idosa é muito assustada com veterinários e ela a deixou completamente relaxada desde o primeiro atendimento. O cuidado vai muito além da técnica — é humano, é especial."</p>
+      <div class="depoimento-autor">
+        <div class="depoimento-avatar">J</div>
+        <div>
+          <div class="depoimento-nome">Juliana C.</div>
+          <div class="depoimento-pet">Tutora da Frida · Gata 16 anos</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="depoimento-card reveal">
+      <div class="depoimento-estrelas">★★★★★</div>
+      <p class="depoimento-texto">"Meu Buldogue francês estava com problemas respiratórios crônicos e muita dificuldade para dormir. A acupuntura mudou completamente o quadro dele. Dorme a noite toda, voltou a brincar e os exames melhoraram muito."</p>
+      <div class="depoimento-autor">
+        <div class="depoimento-avatar">L</div>
+        <div>
+          <div class="depoimento-nome">Leonardo A.</div>
+          <div class="depoimento-pet">Tutor do Zé · Buldogue Francês</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="depoimento-card reveal">
+      <div class="depoimento-estrelas">★★★★★</div>
+      <p class="depoimento-texto">"Levei minha gata com problema renal avançado sem muita esperança. A Dra. Viviane montou um protocolo completo com farmacopuntura e a minha Mel ganhou mais 2 anos de qualidade de vida. Nunca me esquecerei disso."</p>
+      <div class="depoimento-autor">
+        <div class="depoimento-avatar">V</div>
+        <div>
+          <div class="depoimento-nome">Vanessa O.</div>
+          <div class="depoimento-pet">Tutora da Mel · Gata 17 anos</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="depoimento-card reveal">
+      <div class="depoimento-estrelas">★★★★★</div>
+      <p class="depoimento-texto">"Meu Pastor Alemão estava paralítico do quadril após uma cirurgia. Após 10 sessões de acupuntura e laser ele voltou a caminhar. A Dra. Viviane acompanhou cada etapa com dedicação total. É raro encontrar alguém assim."</p>
+      <div class="depoimento-autor">
+        <div class="depoimento-avatar">R</div>
+        <div>
+          <div class="depoimento-nome">Roberto N.</div>
+          <div class="depoimento-pet">Tutor do Rex · Pastor Alemão</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="depoimento-card reveal">
+      <div class="depoimento-estrelas">★★★★★</div>
+      <p class="depoimento-texto">"Minha filha tem um gato que entrou em depressão após perder um companheiro. A Dra. Viviane tratou com acupuntura e orientações de bem-estar. Em poucas semanas ele voltou a comer bem e a interagir. Atendimento incrível."</p>
+      <div class="depoimento-autor">
+        <div class="depoimento-avatar">S</div>
+        <div>
+          <div class="depoimento-nome">Sandra T.</div>
+          <div class="depoimento-pet">Tutora do Loki · Gato SRD</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="depoimento-card reveal">
+      <div class="depoimento-estrelas">★★★★★</div>
+      <p class="depoimento-texto">"Minha Shih Tzu tinha convulsões frequentes e tomava muito remédio. Com o protocolo da Dra. Viviane as crises diminuíram em mais de 70% e conseguimos reduzir a medicação. A qualidade de vida dela mudou completamente."</p>
+      <div class="depoimento-autor">
+        <div class="depoimento-avatar">E</div>
+        <div>
+          <div class="depoimento-nome">Elaine K.</div>
+          <div class="depoimento-pet">Tutora da Nina · Shih Tzu</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="depoimento-card reveal">
+      <div class="depoimento-estrelas">★★★★★</div>
+      <p class="depoimento-texto">"O meu cachorro foi diagnosticado com artrite severa ainda jovem. A Dra. Viviane criou um plano de longo prazo com acupuntura e orientações de manejo. Hoje ele tem uma vida ativa e praticamente sem dor. Gratidão enorme."</p>
+      <div class="depoimento-autor">
+        <div class="depoimento-avatar">D</div>
+        <div>
+          <div class="depoimento-nome">Diego H.</div>
+          <div class="depoimento-pet">Tutor do Apolo · Labrador</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="depoimento-card reveal">
+      <div class="depoimento-estrelas">★★★★★</div>
+      <p class="depoimento-texto">"Minha gata foi operada e o pós-operatório estava muito difícil — ela mal comia e estava muito prostrada. A Dra. Viviane começou o tratamento no dia seguinte e a recuperação foi surpreendentemente rápida. Que profissional!"</p>
+      <div class="depoimento-autor">
+        <div class="depoimento-avatar">I</div>
+        <div>
+          <div class="depoimento-nome">Isabela R.</div>
+          <div class="depoimento-pet">Tutora da Cleo · Gata Siamesa</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="depoimento-card reveal">
+      <div class="depoimento-estrelas">★★★★★</div>
+      <p class="depoimento-texto">"Tenho dois cachorros idosos e os dois são pacientes da Dra. Viviane. Ela trata cada um como se fosse único, com protocolos diferentes para cada necessidade. É o tipo de cuidado que a gente sonha encontrar pra quem ama."</p>
+      <div class="depoimento-autor">
+        <div class="depoimento-avatar">B</div>
+        <div>
+          <div class="depoimento-nome">Beatriz W.</div>
+          <div class="depoimento-pet">Tutora do Mel e do Caju · 13 e 15 anos</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="depoimento-card reveal">
+      <div class="depoimento-estrelas">★★★★★</div>
+      <p class="depoimento-texto">"Meu gato tinha hipotireoidismo e letargia crônica. A acupuntura, combinada com o tratamento convencional, transformou o animal. Hoje ele corre, brinca e come bem. A Dra. Viviane é apaixonada pelo que faz — e isso a gente sente."</p>
+      <div class="depoimento-autor">
+        <div class="depoimento-avatar">M</div>
+        <div>
+          <div class="depoimento-nome">Marcos V.</div>
+          <div class="depoimento-pet">Tutor do Bóris · Gato Maine Coon</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="depoimento-card reveal">
+      <div class="depoimento-estrelas">★★★★★</div>
+      <p class="depoimento-texto">"Indico para todos os tutores que conheço. A Dra. Viviane tem uma formação rarissíma — psicóloga, veterinária e acupunturista — e isso faz toda a diferença no atendimento. Ela entende o animal e entende o tutor. Simplesmente única."</p>
+      <div class="depoimento-autor">
+        <div class="depoimento-avatar">A</div>
+        <div>
+          <div class="depoimento-nome">Aline S.</div>
+          <div class="depoimento-pet">Tutora da Pitanga · Gata SRD</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end grid -->
+
+  <div class="carousel-nav">
+    <button class="carousel-btn" id="depPrev" onclick="depMove(-1)">&#8592;</button>
+    <div class="carousel-dots" id="depDots"></div>
+    <button class="carousel-btn" id="depNext" onclick="depMove(1)">&#8594;</button>
+  </div>
+
+  </div><!-- end wrap -->
+</section>
+
+<!-- FAQ -->
+<section class="section faq-section" id="faq">
+  <div class="faq-header">
+    <div class="section-label reveal">Dúvidas frequentes</div>
+    <h2 class="section-title reveal">Perguntas que os tutores <em>sempre fazem</em></h2>
+    <p class="section-desc reveal">Respostas diretas para você chegar à consulta com mais tranquilidade.</p>
+  </div>
+
+  <div class="faq-lista">
+
+    <div class="faq-item reveal">
+      <button class="faq-pergunta" onclick="toggleFaq(this)">
+        <span>A acupuntura dói no animal?</span>
+        <span class="faq-icone">+</span>
+      </button>
+      <div class="faq-resposta">
+        <p>Na grande maioria dos casos, não. As agulhas utilizadas são extremamente finas — muito mais finas do que uma agulha de injeção comum. A maioria dos animais relaxa durante o procedimento, muitos chegam a adormecer. Animais mais ansiosos podem demonstrar algum desconforto inicial, que passa rapidamente.</p>
+      </div>
+    </div>
+
+    <div class="faq-item reveal">
+      <button class="faq-pergunta" onclick="toggleFaq(this)">
+        <span>Quantas sessões são necessárias?</span>
+        <span class="faq-icone">+</span>
+      </button>
+      <div class="faq-resposta">
+        <p>Depende do caso. Condições agudas (dor pós-cirúrgica, por exemplo) podem responder em 3 a 5 sessões. Condições crônicas como artrite, doenças neurológicas ou doença renal costumam exigir tratamento contínuo com manutenção mensal. O protocolo é definido individualmente na primeira consulta.</p>
+      </div>
+    </div>
+
+    <div class="faq-item reveal">
+      <button class="faq-pergunta" onclick="toggleFaq(this)">
+        <span>A acupuntura substitui os medicamentos?</span>
+        <span class="faq-icone">+</span>
+      </button>
+      <div class="faq-resposta">
+        <p>Não necessariamente substitui, mas frequentemente reduz. O objetivo é diminuir ao máximo a dependência de medicamentos contínuos que sobrecarregam órgãos como rins, fígado e estômago — especialmente em animais idosos ou com doenças crônicas. Em muitos casos, a acupuntura é usada em integração com o tratamento convencional.</p>
+      </div>
+    </div>
+
+    <div class="faq-item reveal">
+      <button class="faq-pergunta" onclick="toggleFaq(this)">
+        <span>Meu animal mora em outra cidade. Consigo fazer o tratamento?</span>
+        <span class="faq-icone">+</span>
+      </button>
+      <div class="faq-resposta">
+        <p>Sim! O implante de catgut e a farmacopuntura são justamente pensados para tutores que não podem vir semanalmente. Com essas técnicas, é possível fazer protocolos mensais — o animal recebe o tratamento de forma contínua mesmo entre consultas, sem precisar se deslocar com frequência.</p>
+      </div>
+    </div>
+
+    <div class="faq-item reveal">
+      <button class="faq-pergunta" onclick="toggleFaq(this)">
+        <span>Qualquer animal pode fazer acupuntura?</span>
+        <span class="faq-icone">+</span>
+      </button>
+      <div class="faq-resposta">
+        <p>A acupuntura veterinária atende principalmente cães e gatos, mas também pode ser aplicada em outros animais. Não há contraindicação geral — cada caso é avaliado individualmente. Animais idosos, em pós-operatório, com doenças crônicas ou neurológicas são especialmente beneficiados.</p>
+      </div>
+    </div>
+
+    <div class="faq-item reveal">
+      <button class="faq-pergunta" onclick="toggleFaq(this)">
+        <span>Como é a primeira consulta?</span>
+        <span class="faq-icone">+</span>
+      </button>
+      <div class="faq-resposta">
+        <p>A primeira consulta é mais longa e completa. A Dra. Viviane faz uma anamnese detalhada — histórico clínico, hábitos, alimentação, comportamento — e examina o animal com atenção. Só depois de entender o caso com profundidade é que o protocolo de tratamento é definido. Traga exames anteriores se houver.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- LOCALIZAÇÃO & CONTATO -->
+<section class="section localizacao-section" id="contato">
+  <div class="localizacao-grid">
+
+    <div class="localizacao-info">
+      <div class="section-label reveal">Onde nos encontrar</div>
+      <h2 class="section-title reveal">Venha visitar o <em>consultório</em></h2>
+
+      <div class="local-item reveal">
+        <div class="local-icone">📍</div>
+        <div>
+          <div class="local-titulo">Endereço</div>
+          <p class="local-desc">Rua [ENDEREÇO COMPLETO]<br>Bairro — Cidade/SP<br>CEP: [CEP]</p>
+          <div class="local-btns">
+            <a href="https://maps.google.com/?q=Dra+Viviane+Acupuntura+Veterinaria" target="_blank" class="local-btn-mapa">
+              📍 Google Maps
+            </a>
+            <a href="https://waze.com/ul?q=Dra+Viviane+Acupuntura+Veterinaria" target="_blank" class="local-btn-mapa local-btn-waze">
+              🚗 Waze
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="local-item reveal">
+        <div class="local-icone">🕐</div>
+        <div>
+          <div class="local-titulo">Horário de atendimento</div>
+          <p class="local-desc">Segunda a Sexta: 8h às 18h<br>Sábado: 8h às 13h<br><em>Agendamento prévio necessário</em></p>
+        </div>
+      </div>
+
+      <div class="local-item reveal">
+        <div class="local-icone">📱</div>
+        <div>
+          <div class="local-titulo">WhatsApp</div>
+          <p class="local-desc">(11) 94308-3814</p>
+          <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Viviane!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" class="local-btn-mapa" style="margin-top:8px">
+            💬 Iniciar conversa
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="contato-direto reveal">
+      <div class="contato-direto-icon">🐾</div>
+      <h3 class="contato-direto-titulo">Agende pelo WhatsApp</h3>
+      <p class="contato-direto-desc">A forma mais rápida de marcar uma consulta é direto pelo WhatsApp. A Dra. Viviane responde pessoalmente.</p>
+      <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Viviane!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20para%20o%20meu%20pet." target="_blank" class="contato-wa-btn">
+        💬 Falar agora no WhatsApp
+      </a>
+      <p class="contato-direto-info">Resposta rápida · Atendimento humanizado</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CTA FINAL -->
+<section class="cta-section">
+  <h2 class="cta-title reveal">
+    Seu animal merece<br>tratamento de <em>verdade</em>
+  </h2>
+  <p class="cta-desc reveal">
+    Entre em contato agora. Vamos conversar sobre o caso do seu pet — sem compromisso — e entender como a acupuntura veterinária pode ajudá-lo.
+  </p>
+  <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Viviane!%20Vi%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20acupuntura%20veterinária%20para%20o%20meu%20pet." class="cta-btn reveal" target="_blank">
+    💬 Agendar pelo WhatsApp
+  </a>
+  <p class="cta-info reveal">Atendimento presencial · Protocolo para outras cidades disponível</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Dra. Viviane<span> vet</span></div>
+  <div class="footer-links">
+    <a href="#servicos">Serviços</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#casos">Casos</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contato">Contato</a>
+  </div>
+  <div class="footer-info">
+    <div class="footer-text">Médica Veterinária Clínica · Acupunturista Veterinária · Terapeuta Integrativa</div>
+    <div class="footer-text">CRMV-SP [NÚMERO DO CRMV]</div>
+    <div class="footer-text">© 2026 · Todos os direitos reservados</div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FIXO (canto inferior direito) -->
+<a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Viviane!%20Quero%20saber%20mais%20sobre%20acupuntura%20veterinária." class="whatsapp-fixed" target="_blank" title="Falar no WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="30" height="30" fill="white">
+    <path d="M16 2C8.268 2 2 8.268 2 16c0 2.49.65 4.83 1.79 6.87L2 30l7.35-1.77A13.94 13.94 0 0 0 16 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm0 25.5a11.44 11.44 0 0 1-5.83-1.6l-.42-.25-4.36 1.05 1.08-4.24-.27-.44A11.47 11.47 0 0 1 4.5 16C4.5 9.648 9.648 4.5 16 4.5S27.5 9.648 27.5 16 22.352 27.5 16 27.5zm6.29-8.43c-.34-.17-2.02-1-2.33-1.11-.32-.12-.55-.17-.78.17-.23.34-.9 1.11-1.1 1.34-.2.23-.41.26-.75.09-.34-.17-1.44-.53-2.74-1.69-1.01-.9-1.7-2.02-1.9-2.36-.2-.34-.02-.52.15-.69.15-.15.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.09-.17-.78-1.88-1.07-2.57-.28-.68-.57-.59-.78-.6h-.67c-.23 0-.6.09-.91.43-.32.34-1.2 1.17-1.2 2.86s1.23 3.32 1.4 3.55c.17.23 2.42 3.7 5.87 5.19.82.35 1.46.56 1.96.72.82.26 1.57.22 2.16.13.66-.1 2.02-.83 2.31-1.62.28-.8.28-1.48.2-1.62-.09-.14-.32-.23-.66-.4z"/>
+  </svg>
+</a>
+
+<!-- WHATSAPP LATERAL (meio da tela, lado direito) -->
+<a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Viviane!%20Gostaria%20de%20agendar%20uma%20consulta%20para%20o%20meu%20pet." class="whatsapp-mid" target="_blank" title="Agendar consulta">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="20" height="20" fill="white">
+    <path d="M16 2C8.268 2 2 8.268 2 16c0 2.49.65 4.83 1.79 6.87L2 30l7.35-1.77A13.94 13.94 0 0 0 16 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm0 25.5a11.44 11.44 0 0 1-5.83-1.6l-.42-.25-4.36 1.05 1.08-4.24-.27-.44A11.47 11.47 0 0 1 4.5 16C4.5 9.648 9.648 4.5 16 4.5S27.5 9.648 27.5 16 22.352 27.5 16 27.5zm6.29-8.43c-.34-.17-2.02-1-2.33-1.11-.32-.12-.55-.17-.78.17-.23.34-.9 1.11-1.1 1.34-.2.23-.41.26-.75.09-.34-.17-1.44-.53-2.74-1.69-1.01-.9-1.7-2.02-1.9-2.36-.2-.34-.02-.52.15-.69.15-.15.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.09-.17-.78-1.88-1.07-2.57-.28-.68-.57-.59-.78-.6h-.67c-.23 0-.6.09-.91.43-.32.34-1.2 1.17-1.2 2.86s1.23 3.32 1.4 3.55c.17.23 2.42 3.7 5.87 5.19.82.35 1.46.56 1.96.72.82.26 1.57.22 2.16.13.66-.1 2.02-.83 2.31-1.62.28-.8.28-1.48.2-1.62-.09-.14-.32-.23-.66-.4z"/>
+  </svg> <span class="wa-label">Agendar agora</span>
+</a>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal').forEach((el, i) => {
+  el.style.transitionDelay = (i % 4) * 0.08 + 's';
+  observer.observe(el);
+});
+
+function toggleFaq(btn) {
+  const item = btn.parentElement;
+  const resposta = item.querySelector('.faq-resposta');
+  const icone = btn.querySelector('.faq-icone');
+  const isOpen = resposta.classList.contains('open');
+  document.querySelectorAll('.faq-resposta.open').forEach(r => r.classList.remove('open'));
+  document.querySelectorAll('.faq-icone.open').forEach(i => i.classList.remove('open'));
+  if (!isOpen) {
+    resposta.classList.add('open');
+    icone.classList.add('open');
+  }
+}
+
+function toggleMenu() {
+  const hamburger = document.getElementById('hamburger');
+  const menu = document.getElementById('mobileMenu');
+  hamburger.classList.toggle('open');
+  menu.classList.toggle('open');
+  document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+}
+
+function closeMenu() {
+  document.getElementById('hamburger').classList.remove('open');
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function iniciarVideo(src, thumbEl) {
+  const placeholder = document.getElementById('videoPlaceholder');
+  const principal = document.getElementById('videoPrincipal');
+  const infoTitle = document.getElementById('videoInfoTitle');
+  const infoDesc = document.getElementById('videoInfoDesc');
+  if (placeholder) placeholder.style.display = 'none';
+  principal.style.display = 'block';
+  principal.src = src;
+  principal.load();
+  principal.play();
+  document.querySelectorAll('.video-thumb').forEach(t => t.classList.remove('ativo'));
+  if (thumbEl) {
+    thumbEl.classList.add('ativo');
+    if (infoTitle) infoTitle.textContent = thumbEl.dataset.title || infoTitle.textContent;
+    if (infoDesc) infoDesc.textContent = thumbEl.dataset.desc || infoDesc.textContent;
+  }
+}
+
+// DEPOIMENTOS CAROUSEL
+(function() {
+  var carousel = document.getElementById('depCarousel');
+  var dotsWrap = document.getElementById('depDots');
+  var prevBtn = document.getElementById('depPrev');
+  var nextBtn = document.getElementById('depNext');
+  if (!carousel) return;
+
+  var cards = carousel.querySelectorAll('.depoimento-card');
+  var current = 0;
+
+  function getVisible() {
+    if (window.innerWidth <= 580) return 1;
+    if (window.innerWidth <= 900) return 2;
+    return 3;
+  }
+
+  function totalPages() {
+    return Math.ceil(cards.length / getVisible());
+  }
+
+  function buildDots() {
+    dotsWrap.innerHTML = '';
+    var pages = totalPages();
+    for (var i = 0; i < pages; i++) {
+      var d = document.createElement('button');
+      d.className = 'carousel-dot' + (i === current ? ' active' : '');
+      d.setAttribute('data-i', i);
+      d.onclick = (function(idx) { return function() { goTo(idx); }; })(i);
+      dotsWrap.appendChild(d);
+    }
+  }
+
+  function goTo(page) {
+    var pages = totalPages();
+    current = Math.max(0, Math.min(page, pages - 1));
+    var visible = getVisible();
+    var cardWidth = cards[0].offsetWidth + 24;
+    carousel.scrollLeft = current * visible * cardWidth;
+    buildDots();
+    prevBtn.disabled = current === 0;
+    nextBtn.disabled = current >= pages - 1;
+  }
+
+  function depMove(dir) { goTo(current + dir); }
+  window.depMove = depMove;
+
+  buildDots();
+  goTo(0);
+  window.addEventListener('resize', function() { buildDots(); goTo(0); });
+})();
+</script>
+</body>
+</html>
