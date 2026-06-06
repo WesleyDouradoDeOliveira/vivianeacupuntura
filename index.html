@@ -3,7 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Acupuntura veterinária e terapias integrativas para cães e gatos. Atendimento clínico e domiciliar com foco em dor, equilíbrio emocional e qualidade de vida. Agende agora pelo WhatsApp.">
+<meta name="theme-color" content="#2D5C3F">
 <title>Dra. Viviane | Acupuntura Veterinária & Terapias Integrativas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -641,7 +645,7 @@
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
     gap: 32px;
-    align-items: center;
+    align-items: start;
     max-width: 1100px;
     margin: 0 auto;
     padding: 64px 0 40px;
@@ -1308,18 +1312,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
-    margin-top: 36px;
+    gap: 8px;
+    margin-top: 24px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 0 8px;
   }
 
   .carousel-btn {
-    width: 44px;
-    height: 44px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     border: 1.5px solid var(--verde);
     background: transparent;
     color: var(--verde);
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -1328,21 +1335,13 @@
     flex-shrink: 0;
   }
 
-  .carousel-btn:hover {
-    background: var(--verde);
-    color: var(--branco);
-  }
-
-  .carousel-btn:disabled {
-    opacity: 0.3;
-    cursor: default;
-    pointer-events: none;
-  }
-
   .carousel-dots {
     display: flex;
-    gap: 8px;
-    align-items: center;
+    gap: 4px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    overflow-x: auto;
+    padding: 4px 0;
   }
 
   .carousel-dot {
@@ -1354,6 +1353,17 @@
     cursor: pointer;
     padding: 0;
     transition: background 0.2s, transform 0.2s;
+  }
+
+  .carousel-btn:hover {
+    background: var(--verde);
+    color: var(--branco);
+  }
+
+  .carousel-btn:disabled {
+    opacity: 0.3;
+    cursor: default;
+    pointer-events: none;
   }
 
   .carousel-dot.active {
@@ -2351,7 +2361,28 @@
       padding: 32px 6% 60px;
     }
     .hero-stats {
-      gap: 20px;
+      gap: 10px;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+    .hero-stats .stat {
+      flex: 1;
+      min-width: 0;
+      align-items: center;
+      text-align: center;
+    }
+    .hero-stats .stat-num {
+      font-size: 1.7rem;
+    }
+    .hero-stats .stat-label {
+      font-size: 0.75rem;
+    }
+    .hero-stats .stat-divider {
+      width: 1px;
+      height: 40px;
+      margin: 0;
+      align-self: center;
+      background: rgba(45,92,63,0.15);
     }
     .trajetoria-section {
       grid-template-columns: 1fr;
@@ -2481,6 +2512,11 @@
     <div class="section-label">O que ofereço</div>
     <h2 class="section-title">Terapias integradas<br>para o bem-estar do <em>seu animal</em></h2>
     <p class="section-desc">Médica Veterinária Clínica com atendimento presencial e domiciliar. ✓ Protocolos integrativos para resultado mais seguro, tutor mais confiante e cuidado total com seu animal. Todos os serviços disponíveis em consultório ou na sua casa.</p>
+    <div style="text-align:center; margin-top:24px;">
+      <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Viviane!%20Quero%20uma%20avaliação%20para%20meu%20pet." class="btn-primary" target="_blank" style="max-width:280px;">
+        💬 Avaliação rápida no WhatsApp
+      </a>
+    </div>
   </div>
 
   <div class="servicos-grid">
@@ -2600,10 +2636,17 @@
           <strong>🌟 Qualidade de Vida para Gatos Idosos</strong>
           <p>Mais que tratar a doença — o objetivo é preservar o conforto e a alegria de viver. Com este protocolo integrado, gatos com DRC ganham mais disposição, melhor hidratação, apetite restabelecido e uma velhice digna ao lado de quem amam.</p>
         </div>
+       
       </div>
     </div>
     <div class="fluidoterapia-image reveal">
-      <img src="renal.jpeg" alt="Gato recebendo fluidoterapia subcutânea" />
+      <div style="background: var(--verde-palido); border-radius: 28px; padding: 26px; display: grid; gap: 18px;">
+        <img src="seringa.jpeg" alt="Seringa apropriada e segura" style="width:100%;height:auto;border-radius:22px;display:block;" />
+        <div style="background: var(--branco);border-radius:20px;padding:18px;border:1px solid rgba(45,92,63,0.12);box-shadow:0 14px 30px rgba(45,92,63,0.06);">
+          <h3 style="margin:0 0 10px;font-size:1.1rem;color:var(--verde);">Aplicação segura e profissional</h3>
+          <p style="margin:0;color:var(--texto-suave);font-size:0.95rem;line-height:1.7;">A técnica utiliza seringas apropriadas para cada paciente, ambiente limpo e materiais esterilizados — tudo para transmitir profissionalismo e segurança.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -2698,6 +2741,11 @@
     <div class="section-label reveal">Resultados reais</div>
     <h2 class="section-title reveal">Histórias que <em>emocionam</em></h2>
     <p class="section-desc reveal">Casos acompanhados com dedicação, paciência e uma ciência que funciona.</p>
+    <div style="text-align:center; margin-top:20px;">
+      <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Viviane!%20Quero%20saber%20se%20a%20acupuntura%20é%20certa%20para%20meu%20pet." class="btn-secondary" target="_blank" style="padding:12px 26px;">
+        📲 Quero conversar com a Dra. Viviane
+      </a>
+    </div>
   </div>
 
   <!-- NICOLAS: ANTES E DEPOIS em destaque -->
@@ -2755,6 +2803,36 @@
       <div class="caso-condicao">Doença comum em cães de grande porte</div>
       <p class="caso-resultado">Acupuntura, farmacopuntura e laserterapia combinados — redução expressiva da dor e melhora na mobilidade, sem sobrecarga medicamentosa.</p>
       <span class="caso-badge">Protocolo especializado</span>
+    </div>
+
+    <div class="caso-card reveal">
+      <div class="caso-foto-wrap">
+        <img src="zoe.jpeg" alt="Zoe com acupuntura" class="caso-foto">
+      </div>
+      <div class="caso-nome">Zoe</div>
+      <div class="caso-condicao">6 anos · Lama bilhar · Endocrinopatia · Instabilidade locomotora</div>
+      <p class="caso-resultado">Uma cadela muito levada e carismática que passou por trauma e desequilíbrio. Com acupuntura e acompanhamento integrativo, a lama bilhar sumiu e ela voltou a se mover melhor e a sorrir de novo.</p>
+      <span class="caso-badge">✅ Recuperação progressiva · 8+ sessões</span>
+    </div>
+
+    <div class="caso-card reveal">
+      <div class="caso-foto-wrap">
+        <img src="coju.jpeg" alt="Cojocaru em sessão" class="caso-foto">
+      </div>
+      <div class="caso-nome">Cojocaru</div>
+      <div class="caso-condicao">13 anos · Tratamento focado em emoção · Luto</div>
+      <p class="caso-resultado">Ela parou de brincar após perder um amigo. O tratamento clínico sozinho não ajudou; a acupuntura trouxe suporte emocional e devolveu interesse e leveza.</p>
+      <span class="caso-badge">Energia emocional recuperada</span>
+    </div>
+
+    <div class="caso-card reveal">
+      <div class="caso-foto-wrap">
+        <img src="pr.jpeg" alt="Alina em sessão preventiva" class="caso-foto">
+      </div>
+      <div class="caso-nome">Alina</div>
+      <div class="caso-condicao">13 anos · Preventivo semanal · Vitalidade</div>
+      <p class="caso-resultado">Ela é super ativa e faz sessões regulares para conservar a vitalidade. O foco é prevenção com acompanhamento contínuo para manter a alegria e qualidade de vida.</p>
+      <span class="caso-badge">Preventivo e vitalidade</span>
     </div>
 
     <div class="caso-card reveal">
@@ -2952,6 +3030,27 @@
       <img src="ela4.jpeg" alt="Fifi na mochila em atendimento">
       <div class="galeria-overlay"><span>Cada animal no seu tempo</span></div>
     </div>
+
+    <div class="galeria-item reveal">
+      <img src="c2.jpeg" alt="Cuidado que você vai ter" />
+      <div class="galeria-overlay"><span>O cuidado que você vai ter</span></div>
+    </div>
+    <div class="galeria-item reveal">
+      <img src="coj.jpeg" alt="Atendimento emocional e energético" />
+      <div class="galeria-overlay"><span>Recuperação emocional em foco</span></div>
+    </div>
+    <div class="galeria-item reveal">
+      <img src="pr.jpeg" alt="Rotina preventiva com acupuntura" />
+      <div class="galeria-overlay"><span>Rotina preventiva</span></div>
+    </div>
+    <div class="galeria-item reveal">
+      <img src="pre.jpeg" alt="Sessão preventiva com vitalidade" />
+      <div class="galeria-overlay"><span>Vitalidade semanal</span></div>
+    </div>
+    <div class="galeria-item reveal">
+      <img src="zoe.jpeg" alt="Zoe em sessão de tratamento" />
+      <div class="galeria-overlay"><span>O cuidado que você vai ter</span></div>
+    </div>
   </div>
 </section>
 
@@ -2995,6 +3094,22 @@
       <div class="eu-eles-overlay"><span>Cada animal no seu tempo</span></div>
     </div>
 
+    <div class="eu-eles-item eu-eles-grande">
+      <img src="eueazoe.jpeg" alt="Zoe durante tratamento" style="object-position: center top;">
+      <div class="eu-eles-overlay"><span>Zoe, 6 anos: reequilíbrio emocional e físico</span></div>
+    </div>
+
+    <div class="eu-eles-item">
+      <img src="zoee.jpeg" alt="Zoe em sessão de acupuntura" style="object-position: center top;">
+      <div class="eu-eles-overlay"><span>Trauma, emoção e recuperação</span></div>
+    </div>
+
+  </div>
+
+  <div class="eu-eles-texto-card reveal" style="max-width:1100px;margin:0 auto 40px;background:var(--verde);color:#fff;border-radius:22px;padding:30px;">
+    <p class="quote-icon">“</p>
+    <p class="eu-eles-frase" style="color:#fff;">Zoe é uma cadela de 6 anos que veio com lama bilhar, endocrinopatia e instabilidade locomotora. Ela também carregava um trauma emocional forte após presenciar a perda de um amigo. Com acupuntura e acompanhamento integrativo, a lama sumiu e ela está voltando a ser a cachorra feliz de antes.</p>
+    <p class="eu-eles-assinatura" style="color:rgba(255,255,255,0.8);">Reequilíbrio energético e emocional com Medicina Tradicional Chinesa.</p>
   </div>
 
   <!-- Frase final -->
@@ -3543,6 +3658,15 @@ function iniciarVideo(src, thumbEl) {
   goTo(0);
   window.addEventListener('resize', function() { buildDots(); goTo(0); });
 })();
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('img:not(.hero-real-img)').forEach(function(img) {
+      img.loading = 'lazy';
+      img.decoding = 'async';
+    });
+  });
 </script>
 </body>
 </html>
