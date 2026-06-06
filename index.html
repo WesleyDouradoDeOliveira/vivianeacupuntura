@@ -682,6 +682,12 @@
     font-weight: 300;
   }
 
+  .fluidoterapia-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .fluidoterapia-image img {
     width: 100%;
     border-radius: 28px;
@@ -1018,7 +1024,7 @@
   .galeria-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 280px);
+    grid-auto-rows: 260px;
     gap: 14px;
     max-width: 1100px;
     margin: 0 auto;
@@ -1029,10 +1035,11 @@
     border-radius: 16px;
     overflow: hidden;
     cursor: pointer;
+    height: 260px;
   }
 
   .galeria-grande {
-    grid-row: span 2;
+    grid-row: span 1;
   }
 
   .galeria-item img {
@@ -1862,7 +1869,7 @@
   .eu-eles-mosaico {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 280px);
+    grid-auto-rows: 280px;
     gap: 14px;
     max-width: 1100px;
     margin: 0 auto 80px;
@@ -1906,9 +1913,9 @@
     font-style: italic;
   }
 
-  /* item grande ocupa 2 linhas */
+  /* item grande agora mantém o mesmo tamanho das outras imagens */
   .eu-eles-grande {
-    grid-row: span 2;
+    grid-row: span 1;
   }
 
   /* bloco de texto no meio do mosaico */
@@ -3094,14 +3101,9 @@
       <div class="eu-eles-overlay"><span>Cada animal no seu tempo</span></div>
     </div>
 
-    <div class="eu-eles-item eu-eles-grande">
-      <img src="eueazoe.jpeg" alt="Zoe durante tratamento" style="object-position: center top;">
-      <div class="eu-eles-overlay"><span>Zoe, 6 anos: reequilíbrio emocional e físico</span></div>
-    </div>
-
     <div class="eu-eles-item">
-      <img src="zoee.jpeg" alt="Zoe em sessão de acupuntura" style="object-position: center top;">
-      <div class="eu-eles-overlay"><span>Trauma, emoção e recuperação</span></div>
+      <img src="eueazoe.jpeg" alt="Zoe durante tratamento" style="object-position: center 75%;">
+      <div class="eu-eles-overlay"><span>Zoe, 6 anos: reequilíbrio emocional e físico</span></div>
     </div>
 
   </div>
