@@ -7,7 +7,7 @@
 <meta name="robots" content="index, follow">
 <meta property="og:title" content="Dra. Viviane | Acupuntura Veterinária & Terapias Integrativas">
 <meta property="og:description" content="Acupuntura veterinária e terapias integrativas com atendimento 100% domiciliar para cães e gatos. Recuperação, conforto e qualidade de vida no lar do seu pet.">
-<meta property="og:image" content="perfil_1.jpeg">
+<meta property="og:image" content="perfil11.png">
 <meta name="theme-color" content="#2D5C3F">
 <title>Dra. Viviane | Acupuntura Veterinária & Terapias Integrativas</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -198,11 +198,11 @@
   /* HERO */
   .hero {
     height: 100vh;
-    min-height: 600px;
-    padding-top: 64px;
-    background: var(--creme);
-    display: grid;
-    grid-template-columns: 52% 48%;
+    min-height: 100vh;
+    padding: 0;
+    background: url("perfil1.png") center center/cover no-repeat scroll;
+    display: flex;
+    align-items: center;
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -212,11 +212,10 @@
   .hero::before {
     content: '';
     position: absolute;
-    top: -80px; right: -80px;
-    width: 500px; height: 500px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(122,184,146,0.18) 0%, transparent 70%);
+    inset: 0;
+    background: transparent;
     pointer-events: none;
+    z-index: 0;
   }
 
   .hero::after {
@@ -233,20 +232,24 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 80px 6% 80px 8%;
+    padding: 48px 4.5% 48px 5.5%;
     position: relative;
-    z-index: 1;
-    border-right: 1px solid rgba(45,92,63,0.12);
-    padding-right: 1.5rem;
+    z-index: 2;
+    max-width: 680px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 32px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
   }
 
   .hero-badge {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(45,92,63,0.1);
-    border: 1px solid rgba(45,92,63,0.2);
-    color: var(--verde);
+    background: rgba(255,255,255,0.16);
+    border: 1px solid rgba(255,255,255,0.24);
+    color: #fff;
     padding: 6px 16px;
     border-radius: 40px;
     font-size: 0.78rem;
@@ -254,23 +257,13 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
     width: fit-content;
-    margin-bottom: 24px;
+    margin-bottom: 18px;
     animation: fadeUp 0.6s ease both;
+    text-shadow: 0 10px 24px rgba(0,0,0,0.25);
   }
 
   .hero-institucional {
-    display: block;
-    margin-top: 16px;
-    margin-bottom: 24px;
-    background: rgba(45,92,63,0.12);
-    border: 1px solid rgba(45,92,63,0.16);
-    color: var(--verde);
-    padding: 14px 18px;
-    border-radius: 18px;
-    font-size: 0.95rem;
-    font-weight: 500;
-    max-width: 760px;
-    line-height: 1.5;
+    display: none;
   }
 
   .hero-badge::before {
@@ -280,11 +273,12 @@
 
   .hero-title {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(2.2rem, 4vw, 3.6rem);
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
     line-height: 1.18;
-    color: var(--verde);
-    margin-bottom: 24px;
+    color: #fff;
+    margin-bottom: 18px;
     animation: fadeUp 0.6s 0.05s ease both;
+    text-shadow: 0 14px 30px rgba(0,0,0,0.35);
   }
 
   .hero-title em {
@@ -293,27 +287,29 @@
   }
 
   .hero-sub {
-    font-size: 1.1rem;
-    color: var(--texto-suave);
-    max-width: 480px;
-    margin-bottom: 24px;
+    font-size: 1.02rem;
+    color: rgba(255,255,255,0.94);
+    max-width: 450px;
+    margin-bottom: 20px;
     font-weight: 300;
-    line-height: 1.8;
+    line-height: 1.7;
     animation: fadeUp 0.6s 0.05s ease both;
+    text-shadow: 0 10px 24px rgba(0,0,0,0.24);
   }
 
   .hero-note {
     font-size: 0.95rem;
-    color: var(--branco);
-    background: rgba(45, 92, 63, 0.92);
-    border-left: 4px solid var(--dourado);
-    padding: 18px 24px;
+    color: rgba(255,255,255,0.96);
+    background: rgba(0, 0, 0, 0.42);
+    border-left: 4px solid rgba(255,255,255,0.72);
+    padding: 16px 22px;
     border-radius: 12px;
-    max-width: 520px;
-    margin-bottom: 24px;
+    max-width: 500px;
+    margin-bottom: 18px;
     font-weight: 500;
-    box-shadow: 0 12px 30px rgba(45,92,63,0.12);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
     animation: fadeUp 0.6s 0.05s ease both;
+    text-shadow: 0 8px 16px rgba(0,0,0,0.2);
   }
 
   .hero-ctas {
@@ -348,9 +344,9 @@
   }
 
   .btn-secondary {
-    background: transparent;
-    color: var(--verde);
-    border: 1.5px solid var(--verde);
+    background: rgba(255,255,255,0.14);
+    color: #fff;
+    border: 1.5px solid rgba(255,255,255,0.45);
     padding: 15px 28px;
     border-radius: 50px;
     font-family: 'DM Sans', sans-serif;
@@ -404,30 +400,11 @@
   }
 
   .hero-image-col {
-    position: relative;
-    overflow: hidden;
-    background: transparent;
+    display: none;
   }
 
   .hero-real-img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center center;
-    filter: saturate(1.12) contrast(1.05) brightness(1.03);
-    display: block;
-  }
-
-  /* gradient fade on left edge to blend with content */
-  .hero-image-col::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to right, transparent 0%, transparent 12%);
-    pointer-events: none;
-    z-index: 1;
+    display: none;
   }
 
   .hero-placeholder { display: none; }
@@ -772,6 +749,18 @@
     position: relative;
   }
 
+  @media (max-width: 900px) {
+    .trajetoria-section {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    
+    .trajetoria-image {
+      max-width: 100%;
+      order: -1;
+    }
+  }
+
   .timeline-item:not(:last-child)::after {
     content: '';
     position: absolute;
@@ -1079,11 +1068,11 @@
   .galeria-item img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center center;
     transition: transform 0.4s ease;
     display: block;
-    background: var(--verde-palido);
+    background: transparent;
   }
 
   .galeria-overlay {
@@ -1261,7 +1250,7 @@
   .servico-foto {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
     border-radius: 16px;
     transition: transform 0.3s ease;
@@ -1284,7 +1273,7 @@
   .caso-foto {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center center;
     transition: transform 0.3s ease;
   }
@@ -1961,7 +1950,7 @@
   .eu-eles-item img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center center;
     transition: transform 0.5s ease;
     display: block;
@@ -2124,9 +2113,9 @@
 
   .video-thumbs {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 12px;
-    max-width: 700px;
+    max-width: min(1400px, 100%);
     margin: 0 auto;
   }
 
@@ -2436,73 +2425,68 @@
     }
 
     .hero {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto;
-      height: auto;
-      min-height: auto;
-      padding-left: 16px;
-      padding-right: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      height: 100vh;
+      background-position: right 30% center;
+      background-size: cover;
+      background-attachment: scroll;
+      padding: 88px 0 36px;
     }
     .hero-image-col {
-      height: auto;
-      min-height: 320px;
-      order: 1;
-      margin-top: 24px;
-      background: linear-gradient(180deg, rgba(45,92,63,0.08), rgba(201,168,76,0.14));
+      display: none;
     }
     .hero-real-img {
-      position: relative;
-      inset: auto;
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      object-position: center center;
-      filter: saturate(1.2) contrast(1.08) brightness(1.05);
-    }
-    .hero-image-col::after {
-      background: linear-gradient(to bottom, transparent 0%, rgba(247,243,236,0.35) 90%);
+      display: none;
     }
     .hero-content {
-      padding: 24px 6% 50px;
+      padding: 44px 6% 44px;
+      margin: 56px auto 26px;
+      background: rgba(8, 18, 14, 0.34);
+      border-radius: 30px;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.24);
+      width: min(100%, 96%);
+    }
+    .hero-badge {
+      margin-bottom: 18px;
+    }
+    .hero-title {
+      font-size: clamp(2rem, 7vw, 3rem);
+      margin-bottom: 18px;
+    }
+    .hero-sub {
+      max-width: 100%;
+      margin-bottom: 20px;
     }
     .hero-note {
-      margin-bottom: 16px;
-    }
-    .hero-institucional {
-      margin-top: 0;
-      margin-bottom: 18px;
-    }
-    .hero-ctas {
-      margin-bottom: 18px;
+      max-width: 100%;
+      margin-bottom: 20px;
     }
     .hero-stats {
-      gap: 10px;
-      flex-wrap: nowrap;
+      gap: 16px;
+      flex-wrap: wrap;
       justify-content: space-between;
     }
     .hero-stats .stat {
-      flex: 1;
+      flex: 1 1 30%;
       min-width: 0;
-      align-items: center;
       text-align: center;
     }
-    .hero-stats .stat-num {
-      font-size: 1.7rem;
+    .hero-ctas {
+      flex-direction: column;
+      align-items: stretch;
     }
-    .hero-stats .stat-label {
-      font-size: 0.75rem;
+    .btn-primary,
+    .btn-secondary {
+      width: 100%;
+      justify-content: center;
     }
-    .hero-stats .stat-divider {
-      width: 1px;
-      height: 40px;
-      margin: 0;
-      align-self: center;
-      background: rgba(45,92,63,0.15);
+    .btn-secondary {
+      margin-top: 12px;
     }
-    .trajetoria-section {
-      grid-template-columns: 1fr;
-      padding: 60px 6%;
-    }
+  }
     .trajetoria-image {
       min-height: 240px;
     }
@@ -2578,10 +2562,6 @@
       🏠 <strong>Atendimento domiciliar completo</strong> — acupuntura, fluidoterapia e acompanhamento contínuo com menos estresse para seu animal.
     </p>
 
-    <p class="hero-institucional">
-      Medicina Veterinária Clínica, Acupuntura Veterinária, Terapias Integrativas, Fluidoterapia e Atendimento Domiciliar para cães e gatos.
-    </p>
-
     <div class="hero-ctas">
       <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Viviane!%20Quero%20agendar%20uma%20consulta." class="btn-primary" target="_blank" rel="noopener">
         💬 Falar com a Dra. Viviane
@@ -2590,27 +2570,29 @@
         Ver serviços ↓
       </a>
     </div>
-
-    <div class="hero-stats">
-      <div class="stat">
-        <span class="stat-num">+30</span>
-        <span class="stat-label">anos de experiência</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat">
-        <span class="stat-num">4</span>
-        <span class="stat-label">pós-graduações</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat">
-        <span class="stat-num">3</span>
-        <span class="stat-label">especialidades</span>
-      </div>
-    </div>
   </div>
 
   <div class="hero-image-col">
-    <img src="perfil_1.jpeg" alt="Dra. Viviane" class="hero-real-img">
+    <img src="perfil1.png" alt="Dra. Viviane" class="hero-real-img">
+  </div>
+</section>
+
+<section class="section hero-stats-section">
+  <div class="hero-stats">
+    <div class="stat">
+      <span class="stat-num">+30</span>
+      <span class="stat-label">anos de experiência</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <span class="stat-num">4</span>
+      <span class="stat-label">pós-graduações</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <span class="stat-num">3</span>
+      <span class="stat-label">especialidades</span>
+    </div>
   </div>
 </section>
 
@@ -2709,7 +2691,7 @@
 
     <div class="servico-card reveal">
   <div class="servico-icon servico-icon-foto">
-    <img loading="lazy" src="ela_com_o_cao_2.jpeg" 
+    <img loading="lazy" src="7.png" 
          alt="Atendimento domiciliar em acupuntura" 
          class="servico-foto">
   </div>
@@ -2731,7 +2713,7 @@
 <!-- TRAJETÓRIA -->
 <section class="section trajetoria-section" id="sobre">
   <div class="trajetoria-image reveal">
-   <img loading="lazy" src="laser.png" alt="Dra. Viviane com instrumento de acupuntura" style="width:100%;height:auto;display:block;border-radius:24px;">
+   <img loading="lazy" src="perfil11.png" alt="Dra. Viviane com instrumento de acupuntura" style="width:100%;height:auto;display:block;border-radius:24px;">
   </div>
 
   <div>
@@ -2895,7 +2877,7 @@
 
     <div class="caso-card reveal">
       <div class="caso-foto-wrap">
-        <img loading="lazy" src="gporte.jpeg" alt="Aragan Neném em sessão" class="caso-foto">
+        <img loading="lazy" src="neném.jpeg" alt="Aragan Neném em sessão" class="caso-foto">
       </div>
       <div class="caso-nome">Aragan — "Neném"</div>
       <div class="caso-condicao">Rottweiler 60kg · Anemia por hemoparasitose</div>
@@ -3085,8 +3067,8 @@
       <div class="galeria-overlay"><span>O cuidado que você vai ter</span></div>
     </div>
     <div class="galeria-item reveal">
-      <img loading="lazy" src="cromo.jpeg" alt="Cromoterapia" />
-      <div class="galeria-overlay"><span>Cromoterapia: luz e cor para equilíbrio</span></div>
+      <img loading="lazy" src="cnenem.jpeg" alt="O cuidado que você vai ter" />
+      <div class="galeria-overlay"><span>O cuidado que você vai ter</span></div>
     </div>
     <div class="galeria-item reveal">
       <img loading="lazy" src="cui.jpeg" alt="O cuidado que você vai ter" />
