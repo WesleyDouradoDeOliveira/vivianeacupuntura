@@ -4,6 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Acupuntura veterinária e terapias integrativas para cães e gatos. Atendimento clínico e domiciliar com foco em dor, equilíbrio emocional e qualidade de vida. Agende agora pelo WhatsApp.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Dra. Viviane | Acupuntura Veterinária & Terapias Integrativas">
+<meta property="og:description" content="Acupuntura veterinária e terapias integrativas com atendimento 100% domiciliar para cães e gatos. Recuperação, conforto e qualidade de vida no lar do seu pet.">
+<meta property="og:image" content="perfil_1.jpeg">
 <meta name="theme-color" content="#2D5C3F">
 <title>Dra. Viviane | Acupuntura Veterinária & Terapias Integrativas</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -232,6 +236,8 @@
     padding: 80px 6% 80px 8%;
     position: relative;
     z-index: 1;
+    border-right: 1px solid rgba(45,92,63,0.12);
+    padding-right: 1.5rem;
   }
 
   .hero-badge {
@@ -273,11 +279,11 @@
 
   .hero-title {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(2.4rem, 4vw, 3.6rem);
+    font-size: clamp(2.2rem, 4vw, 3.6rem);
     line-height: 1.18;
     color: var(--verde);
     margin-bottom: 24px;
-    animation: fadeUp 0.6s 0.1s ease both;
+    animation: fadeUp 0.6s 0.05s ease both;
   }
 
   .hero-title em {
@@ -292,7 +298,7 @@
     margin-bottom: 24px;
     font-weight: 300;
     line-height: 1.8;
-    animation: fadeUp 0.6s 0.2s ease both;
+    animation: fadeUp 0.6s 0.05s ease both;
   }
 
   .hero-note {
@@ -305,14 +311,14 @@
     max-width: 520px;
     margin-bottom: 32px;
     font-weight: 500;
-    animation: fadeUp 0.6s 0.25s ease both;
+    animation: fadeUp 0.6s 0.05s ease both;
   }
 
   .hero-ctas {
     display: flex;
     gap: 16px;
     flex-wrap: wrap;
-    animation: fadeUp 0.6s 0.3s ease both;
+    animation: fadeUp 0.6s 0.05s ease both;
   }
 
   .btn-primary {
@@ -362,11 +368,11 @@
   }
 
   .hero-stats {
-    margin-top: 56px;
+    margin-top: 36px;
     display: flex;
     flex-wrap: wrap;
     gap: 36px;
-    animation: fadeUp 0.6s 0.4s ease both;
+    animation: fadeUp 0.6s 0.05s ease both;
   }
 
   .stat {
@@ -406,8 +412,8 @@
     inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center top;
+    object-fit: contain;
+    object-position: center center;
     display: block;
   }
 
@@ -426,7 +432,7 @@
   /* SEÇÃO: PARA QUEM É */
   .section-para-quem {
     background: var(--verde);
-    padding: 80px 8%;
+    padding: 60px 8%;
     color: var(--branco);
     text-align: center;
     position: relative;
@@ -489,7 +495,7 @@
 
   /* SEÇÃO GERAL */
   .section {
-    padding: 100px 8%;
+    padding: 72px 8%;
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
@@ -502,7 +508,7 @@
     gap: 8px;
     font-size: 0.78rem;
     font-weight: 500;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--dourado);
     margin-bottom: 16px;
@@ -531,7 +537,7 @@
 
   .section-desc {
     color: var(--texto-suave);
-    max-width: 560px;
+    max-width: 600px;
     font-weight: 300;
     font-size: 1.05rem;
   }
@@ -543,7 +549,7 @@
 
   .servicos-header {
     text-align: center;
-    margin-bottom: 64px;
+    margin-bottom: 48px;
   }
 
   .servicos-header .section-desc {
@@ -555,7 +561,7 @@
   .servicos-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
+    gap: 20px;
     max-width: 1100px;
     margin: 0 auto;
   }
@@ -858,7 +864,7 @@
 
   .casos-header {
     max-width: 600px;
-    margin-bottom: 56px;
+    margin-bottom: 40px;
   }
 
   .casos-grid {
@@ -1045,7 +1051,7 @@
   .galeria-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center center;
     transition: transform 0.4s ease;
     display: block;
@@ -1092,7 +1098,7 @@
   /* CTA FINAL */
   .cta-section {
     background: var(--verde);
-    padding: 100px 8%;
+    padding: 80px 8%;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -1179,7 +1185,7 @@
   footer {
     background: var(--texto);
     color: rgba(255,255,255,0.6);
-    padding: 48px 8%;
+    padding: 36px 8%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1207,16 +1213,16 @@
     inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center 15%;
+    object-fit: contain;
+    object-position: center center;
     z-index: 1;
   }
 
   /* FOTOS NOS CARDS DE SERVIÇOS */
   .servico-icon-foto {
     width: 100%;
-    height: 180px;
-    border-radius: 14px;
+    height: 200px;
+    border-radius: 16px;
     overflow: hidden;
     padding: 0;
     background: var(--verde-palido);
@@ -1225,9 +1231,9 @@
   .servico-foto {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
-    border-radius: 14px;
+    border-radius: 16px;
     transition: transform 0.3s ease;
   }
 
@@ -1248,7 +1254,7 @@
   .caso-foto {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center center;
     transition: transform 0.3s ease;
   }
@@ -1857,7 +1863,7 @@
 
   .eu-eles-header {
     text-align: center;
-    margin-bottom: 64px;
+    margin-bottom: 48px;
   }
 
   .eu-eles-header .section-desc {
@@ -1882,11 +1888,32 @@
     cursor: pointer;
   }
 
+  .atendimento-card {
+    background: rgba(45,92,63,0.12);
+    border: 1px solid rgba(45,92,63,0.18);
+    border-radius: 24px;
+    padding: 30px 32px;
+    display: grid;
+    gap: 0;
+  }
+
+  .atendimento-card-text {
+    color: var(--verde);
+    font-size: 1.02rem;
+    font-weight: 500;
+    line-height: 1.8;
+    margin: 0;
+  }
+
+  .atendimento-card-text strong {
+    font-weight: 700;
+  }
+
   .eu-eles-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center top;
+    object-fit: contain;
+    object-position: center center;
     transition: transform 0.5s ease;
     display: block;
   }
@@ -2077,7 +2104,7 @@
     inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
     display: block;
   }
@@ -2358,8 +2385,8 @@
       inset: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      object-position: center 15%;
+      object-fit: contain;
+      object-position: center center;
     }
     .hero-image-col::after {
       background: linear-gradient(to bottom, transparent 65%, var(--creme) 100%);
@@ -2425,7 +2452,7 @@
     <a href="#faq" class="nav-link">FAQ</a>
     <a href="#contato" class="nav-link">Contato</a>
   </div>
-  <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Viviane!%20Quero%20saber%20mais%20sobre%20acupuntura%20veterinária." class="nav-cta" target="_blank">Agendar consulta →</a>
+  <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Viviane!%20Quero%20saber%20mais%20sobre%20acupuntura%20veterinária." class="nav-cta" target="_blank" rel="noopener">Agendar consulta →</a>
   <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
@@ -2440,7 +2467,7 @@
   <a href="#eu-eles" class="nav-mobile-link" onclick="closeMenu()">❤️ Eu & Eles</a>
   <a href="#faq" class="nav-mobile-link" onclick="closeMenu()">❓ Perguntas Frequentes</a>
   <a href="#contato" class="nav-mobile-link" onclick="closeMenu()">📍 Contato & Localização</a>
-  <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Viviane!%20Quero%20agendar%20uma%20consulta." class="nav-mobile-wa" target="_blank" onclick="closeMenu()">
+  <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Viviane!%20Quero%20agendar%20uma%20consulta." class="nav-mobile-wa" target="_blank" rel="noopener" onclick="closeMenu()">
     💬 Agendar pelo WhatsApp
   </a>
 </div>
@@ -2456,11 +2483,11 @@
     </h1>
 
     <p class="hero-sub">
-      Consultas clínicas, acompanhamento de pacientes crônicos, fluidoterapia e acupuntura veterinária — em consultório ou no domicílio. Seu animal tratado com ciência, sensibilidade e cuidado real.
+      Acupuntura veterinária com foco em resultado real — 100% domiciliar. Seu animal tratado com ciência, sensibilidade e cuidado real.
     </p>
 
     <p class="hero-note">
-      🏠 <strong>Atendimento clínico e domiciliar</strong> — consultas, fluidoterapia, acupuntura e acompanhamento contínuo para pacientes crônicos.
+      🏠 <strong>Atendimento domiciliar completo</strong> — acupuntura, fluidoterapia e acompanhamento contínuo com menos estresse para seu animal.
     </p>
 
     <p class="hero-institucional">
@@ -2468,7 +2495,7 @@
     </p>
 
     <div class="hero-ctas">
-      <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Viviane!%20Quero%20agendar%20uma%20consulta." class="btn-primary" target="_blank">
+      <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Viviane!%20Quero%20agendar%20uma%20consulta." class="btn-primary" target="_blank" rel="noopener">
         💬 Falar com a Dra. Viviane
       </a>
       <a href="#servicos" class="btn-secondary">
@@ -2502,7 +2529,7 @@
 <!-- PARA QUEM É -->
 <section class="section-para-quem">
   <p class="para-quem-quote">
-    "Aquele tutor que realmente vê o seu animal como algo especial — como uma alma a ser respeitada e cuidada — é exatamente quem eu quero atender."
+    "Aquele responsável que realmente vê o seu animal como algo especial — como uma alma a ser respeitada e cuidada — é exatamente quem eu quero atender."
   </p>
   <p class="para-quem-detalhe">
     Dra. Viviane | Médica Veterinária Clínica & Acupunturista Veterinária
@@ -2518,9 +2545,9 @@
   <div class="servicos-header reveal">
     <div class="section-label">O que ofereço</div>
     <h2 class="section-title">Terapias integradas<br>para o bem-estar do <em>seu animal</em></h2>
-    <p class="section-desc">Médica Veterinária Clínica com atendimento presencial e domiciliar. ✓ Protocolos integrativos para resultado mais seguro, tutor mais confiante e cuidado total com seu animal. Todos os serviços disponíveis em consultório ou na sua casa.</p>
+    <p class="section-desc">Médica Veterinária Clínica com atendimento domiciliar. ✓ Protocolos integrativos para resultado mais seguro, responsável mais confiante e cuidado total com seu animal. Todos os serviços são realizados no domicílio.</p>
     <div style="text-align:center; margin-top:24px;">
-      <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Viviane!%20Quero%20uma%20avaliação%20para%20meu%20pet." class="btn-primary" target="_blank" style="max-width:280px;">
+      <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Viviane!%20Quero%20uma%20avaliação%20para%20meu%20pet." class="btn-primary" target="_blank" rel="noopener" style="max-width:280px;">
         💬 Avaliação rápida no WhatsApp
       </a>
     </div>
@@ -2530,82 +2557,79 @@
 
     <div class="servico-card reveal">
   <div class="servico-icon servico-icon-foto">
-    <img src="1.png" 
-         alt="Acupuntura Tradicional" 
+    <img loading="lazy" src="gporte.jpeg" 
+         alt="Rottweiler em atendimento" 
          class="servico-foto">
-  </div><div class="servico-nome">Acupuntura Tradicional</div>
-      <p class="servico-desc">Agulhamento em pontos estratégicos baseados na Medicina Tradicional Chinesa para reequilíbrio energético, controle de dor e estímulo à cura natural.</p>
+  </div><div class="servico-nome">Acupuntura Tradicional Chinesa</div>
+      <p class="servico-desc">Agulhamento em pontos estratégicos embasado na Medicina Tradicional Chinesa para reequilíbrio energético, controle de dor e estímulo à cura natural. Indicado para patologias físicas e/ou emocionais — medo, raiva, ansiedade, euforia, preocupação, posse e tristeza.</p>
       <span class="servico-tag">Base do tratamento</span>
     </div>
 
     <div class="servico-card reveal">
   <div class="servico-icon servico-icon-foto">
-    <img src="2.png" 
+    <img loading="lazy" src="2.png" 
          alt="Moxabustão" 
          class="servico-foto">
   </div>
       <div class="servico-nome">Moxabustão</div>
-      <p class="servico-desc">Aplicação de calor em pontos específicos com erva artemísia — potencializa o agulhamento e é especialmente eficaz no fortalecimento do sistema osteomuscular e imunidade.</p>
+      <p class="servico-desc">Moxabustão é uma técnica terapêutica da Medicina Tradicional Chinesa. A prática estimula pontos específicos com calor para reduzir rigidez muscular, melhorar a circulação, apoiar o sistema imunológico e proporcionar alívio e cicatrização.</p>
       <span class="servico-tag">Calor terapêutico</span>
     </div>
 
-    
-<div class="servico-card reveal">
+        <div class="servico-card reveal">
   <div class="servico-icon servico-icon-foto">
-    <img src="3.png" 
+    <img loading="lazy" src="3.png" 
          alt="Farmacopuntura" 
          class="servico-foto">
   </div>
       <div class="servico-nome">Farmacopuntura</div>
-      <p class="servico-desc">Aplicação de fármacos específicos diretamente nos pontos de acupuntura — potencializa a ação do tratamento. Indicado para anemias renais (eritropoetina), controle de dor intensa e protocolos personalizados.</p>
+      <p class="servico-desc">Aplicação de fármacos específicos diretamente nos pontos de acupuntura, potencializando a ação do tratamento. Indicado para controle de dor, processos renais, ativação de imunomoduladores entre outras ações.</p>
       <span class="servico-tag">Diferencial exclusivo</span>
     </div>
 
-    
-<div class="servico-card reveal">
+    <div class="servico-card reveal">
   <div class="servico-icon servico-icon-foto">
-    <img src="4.png" 
+    <img loading="lazy" src="4.png" 
          alt="Implante de Catgut" 
          class="servico-foto">
   </div>
-       <div class="servico-nome">Implante de Catgut</div>
-      <p class="servico-desc">Fio de sutura absorvível inserido nos pontos de acupuntura — age por 30 dias contínuos. Ideal para pacientes de outras cidades ou animais muito estressados com transporte frequente.</p>
+       <div class="servico-nome">Implantes Semi-permanentes de Catgut</div>
+      <p class="servico-desc">Implantes Semi-permanentes de Catgut (fio de sutura reabsorvível) em acupuntos a fim de estabelecer tratamentos prolongados gerando um estímulo persistente. Muito recomendado para o tratamento de doenças crônicas, animais mais sensíveis ou de outras cidades. Manutenção mensal.</p>
       <span class="servico-tag">Protocolo mensal</span>
     </div>
 
-    
-<div class="servico-card reveal">
+    <div class="servico-card reveal">
   <div class="servico-icon servico-icon-foto">
-    <img src="5.png" 
+    <img loading="lazy" src="cromo.jpeg" 
          alt="Cromoterapia" 
          class="servico-foto">
   </div>
        <div class="servico-nome">Cromoterapia</div>
-      <p class="servico-desc">Uso de cores e frequências de luz associadas à acupuntura para tratamentos complementares — especialmente eficaz em animais mais sensíveis e idosos.</p>
+      <p class="servico-desc">Uso de cores e frequências de luz associadas à acupuntura para tratamentos complementares — especialmente eficaz em animais mais sensíveis e idosos. A imagem mostra melhor o que este cuidado busca expressar.</p>
       <span class="servico-tag">Terapia complementar</span>
     </div>
 
 <div class="servico-card reveal">
   <div class="servico-icon servico-icon-foto">
-    <img src="6.png" 
+    <img loading="lazy" src="6.jpeg" 
          alt="Laserterapia" 
          class="servico-foto">
   </div>
   <div class="servico-nome">Laserterapia</div>
   <p class="servico-desc">
-    Laser de baixa intensidade aplicado aos pontos de acupuntura ou áreas lesionadas — acelera a cicatrização, reduz inflamação e proporciona analgesia sem efeitos colaterais.
+    Laser aplicado aos pontos de acupuntura ou áreas previamente selecionadas, acelerando a cicatrização, reduzindo a inflamação e proporcionando analgesia sem efeitos colaterais.
   </p>
   <span class="servico-tag">Alta tecnologia</span>
 </div>
 
     <div class="servico-card reveal">
   <div class="servico-icon servico-icon-foto">
-    <img src="7.png" 
-         alt="Fluidoterapia Felina" 
+    <img loading="lazy" src="ela_com_o_cao_2.jpeg" 
+         alt="Atendimento domiciliar em acupuntura" 
          class="servico-foto">
   </div>
-      <div class="servico-nome">Fluidoterapia Felina</div>
-      <p class="servico-desc">Soro subcutâneo personalizado para felinos com DRC, associado à acupuntura para manter hidratação, aliviar rins e reforçar recuperação sem estresse.</p>
+      <div class="servico-nome">Aquapuntura e Fluidoterapia</div>
+      <p class="servico-desc">Associação de aplicação de soro nos pontos de acupuntura com a fluidoterapia, combina os efeitos terapêuticos do fluido com a estimulação dos pontos energéticos. Perfeito em várias patologias, em especial em felinos com doença renal crônica. Mantendo hidratação, auxiliando os rins, buscando o equilíbrio.</p>
       <span class="servico-tag">Mais buscado</span>
     </div>
 
@@ -2619,49 +2643,10 @@
   </div>
 </section>
 
-<!-- FLUIDOTERAPIA -->
-<section class="section fluidoterapia-section" id="fluidoterapia">
-  <div class="fluidoterapia-grid">
-    <div class="fluidoterapia-copy reveal">
-      <div class="section-label">FLUIDOTERAPIA FELINA</div>
-      <h2 class="section-title">Cuidado especializado para gatos com <em>Doença Renal Crônica</em></h2>
-      <p class="section-desc">A doença renal crônica (DRC) é uma das condições mais comuns em gatos idosos. A fluidoterapia subcutânea, associada à acupuntura veterinária, é hoje um dos protocolos mais eficazes para manter a qualidade de vida desses pacientes — com conforto, sem estresse e com acompanhamento contínuo.</p>
-      <div class="fluidoterapia-features">
-        <div class="feature-card">
-          <strong>🐱 Doença Renal Crônica Felina</strong>
-          <p>A DRC acomete especialmente gatos a partir dos 7 anos. A Dra. Viviane acompanha esses pacientes com diagnóstico clínico detalhado, monitoramento evolutivo e protocolos adaptados a cada estágio da doença.</p>
-        </div>
-        <div class="feature-card">
-          <strong>💧 Fluidoterapia Subcutânea</strong>
-          <p>Aplicação de soro fisiológico ou Ringer lactato sob a pele do gatinho — suave, rápida e de baixo estresse. Repõe líquidos, alivia a sobrecarga renal e melhora o bem-estar em poucas sessões. Disponível em clínica ou no domicílio.</p>
-        </div>
-        <div class="feature-card">
-          <strong>🪡 Associação com Acupuntura</strong>
-          <p>A combinação de fluidoterapia e acupuntura veterinária potencializa os resultados: a acupuntura estimula pontos renais e de vitalidade, reduz náuseas, melhora o apetite e estabiliza a energia vital — tornando cada sessão de fluido muito mais eficaz.</p>
-        </div>
-        <div class="feature-card">
-          <strong>🌟 Qualidade de Vida para Gatos Idosos</strong>
-          <p>Mais que tratar a doença — o objetivo é preservar o conforto e a alegria de viver. Com este protocolo integrado, gatos com DRC ganham mais disposição, melhor hidratação, apetite restabelecido e uma velhice digna ao lado de quem amam.</p>
-        </div>
-       
-      </div>
-    </div>
-    <div class="fluidoterapia-image reveal">
-      <div style="background: var(--verde-palido); border-radius: 28px; padding: 26px; display: grid; gap: 18px;">
-        <img src="seringa.jpeg" alt="Seringa apropriada e segura" style="width:100%;height:auto;border-radius:22px;display:block;" />
-        <div style="background: var(--branco);border-radius:20px;padding:18px;border:1px solid rgba(45,92,63,0.12);box-shadow:0 14px 30px rgba(45,92,63,0.06);">
-          <h3 style="margin:0 0 10px;font-size:1.1rem;color:var(--verde);">Aplicação segura e profissional</h3>
-          <p style="margin:0;color:var(--texto-suave);font-size:0.95rem;line-height:1.7;">A técnica utiliza seringas apropriadas para cada paciente, ambiente limpo e materiais esterilizados — tudo para transmitir profissionalismo e segurança.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- TRAJETÓRIA -->
 <section class="section trajetoria-section" id="sobre">
   <div class="trajetoria-image reveal">
-   <img src="laser.jpeg" alt="Dra. Viviane com instrumento de acupuntura" style="width:100%;height:auto;display:block;border-radius:24px;">
+   <img loading="lazy" src="laser.png" alt="Dra. Viviane com instrumento de acupuntura" style="width:100%;height:auto;display:block;border-radius:24px;">
   </div>
 
   <div>
@@ -2669,12 +2654,12 @@
     <h2 class="section-title reveal">Médica Veterinária Clínica,<br>Acupunturista e <em>Terapeuta Integrativa</em></h2>
 
     <div class="timeline">
-      <div class="timeline-item reveal">
+        <div class="timeline-item reveal">
         <div class="timeline-dot">🧠</div>
         <div class="timeline-content">
-          <div class="timeline-ano">Desde os anos 80</div>
-          <div class="timeline-titulo">Psicóloga e Educadora</div>
-          <p class="timeline-desc">Formada em Psicologia em 1996, com magistério, psicopedagogia e pós-graduações na área educacional. Décadas dedicadas ao desenvolvimento humano.</p>
+          <div class="timeline-ano">1996</div>
+          <div class="timeline-titulo">Formação em Psicologia</div>
+          <p class="timeline-desc">Formada em Psicologia em 1996, com magistério, psicopedagogia e pós-graduações em distúrbio de aprendizagem. Décadas dedicadas ao desenvolvimento humano e ao entendimento emocional do paciente.</p>
         </div>
       </div>
 
@@ -2683,7 +2668,7 @@
         <div class="timeline-content">
           <div class="timeline-ano">2013</div>
           <div class="timeline-titulo">Médica Veterinária Clínica</div>
-          <p class="timeline-desc">Formada em veterinária com pós-graduação em Clínica de Pequenos Animais. Realiza consultas clínicas, diagnóstico, fluidoterapia subcutânea e acompanhamento de pacientes crônicos — especialmente felinos com doença renal.</p>
+          <p class="timeline-desc">Formada desde 2013 em Medicina Veterinária, pós-graduada em Clínica de Cães e Gatos; pequenos animais e pós-graduanda em medicina integrativa com foco em acupuntura.</p>
         </div>
       </div>
 
@@ -2692,7 +2677,7 @@
         <div class="timeline-content">
           <div class="timeline-ano">Atualidade</div>
           <div class="timeline-titulo">Acupunturista Veterinária & Terapeuta Integrativa</div>
-          <p class="timeline-desc">Finalizando pós-graduação em Acupuntura Veterinária e se dedicando integralmente às terapias integrativas — unindo clínica convencional, acupuntura, fluidoterapia e atendimento domiciliar para oferecer cuidado completo ao paciente e conforto ao tutor.</p>
+          <p class="timeline-desc">Pós-graduanda em medicina integrativa com foco em acupuntura. Atua como médica clínica e acupunturista, auxiliando o próprio ciclo de tratamento para resultados mais completos.</p>
         </div>
       </div>
     </div>
@@ -2727,7 +2712,7 @@
       <div class="diferencial-num">03</div>
       <div class="diferencial-body">
         <div class="diferencial-titulo">Atende pacientes de outras cidades</div>
-        <p class="diferencial-desc">Com catgut e farmacopuntura, é possível fazer protocolos mensais — ótimo para tutores que viajam muito ou animais estressados com transporte frequente.</p>
+        <p class="diferencial-desc">Com catgut e farmacopuntura, é possível fazer protocolos mensais — ótimo para responsáveis que viajam muito ou animais estressados com transporte frequente.</p>
       </div>
     </div>
 
@@ -2735,7 +2720,7 @@
       <div class="diferencial-num">04</div>
       <div class="diferencial-body">
         <div class="diferencial-titulo">Formação multidisciplinar única</div>
-        <p class="diferencial-desc">Psicologia + Veterinária + Acupuntura. Um olhar que enxerga o animal e o tutor como parte do mesmo processo de cura.</p>
+        <p class="diferencial-desc">Psicologia + Veterinária + Acupuntura. Um olhar que enxerga o animal e o responsável como parte do mesmo processo de cura.</p>
       </div>
     </div>
 
@@ -2749,7 +2734,7 @@
     <h2 class="section-title reveal">Histórias que <em>emocionam</em></h2>
     <p class="section-desc reveal">Casos acompanhados com dedicação, paciência e uma ciência que funciona.</p>
     <div style="text-align:center; margin-top:20px;">
-      <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Viviane!%20Quero%20saber%20se%20a%20acupuntura%20é%20certa%20para%20meu%20pet." class="btn-secondary" target="_blank" style="padding:12px 26px;">
+      <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Viviane!%20Quero%20saber%20se%20a%20acupuntura%20é%20certa%20para%20meu%20pet." class="btn-secondary" target="_blank" rel="noopener" style="padding:12px 26px;">
         📲 Quero conversar com a Dra. Viviane
       </a>
     </div>
@@ -2758,13 +2743,13 @@
   <!-- NICOLAS: ANTES E DEPOIS em destaque -->
   <div class="caso-destaque reveal">
     <div class="caso-destaque-tag">⭐ Caso em Destaque</div>
-    <div class="caso-destaque-nome">Nicolas — Cervicalgia Severa</div>
-    <p class="caso-destaque-desc">Chegou com o nariz completamente amassado de dor — a contratura cervical era tão intensa que parecia um tumor. Após 8+ sessões de acupuntura e moxabustão, a recuperação foi progressiva e visível.</p>
+    <div class="caso-destaque-nome">Nicolas — Tetraplegia parcial e cervicalgia severa</div>
+    <p class="caso-destaque-desc">Animal com tetraplegia parcial, incontinência urinária e cervicalgia severa. A melhora foi gratificante: já movimenta o pescoço, sente menos dor e retoma qualidade de vida.</p>
     <div class="antes-depois">
       <div class="ad-col">
         <div class="ad-label ad-antes">Antes</div>
         <div class="ad-foto-wrap">
-          <img src="nicolas-agulhas.jpeg" alt="Nicolas durante acupuntura" class="ad-foto">
+          <img loading="lazy" src="nicolas-agulhas.jpeg" alt="Nicolas durante acupuntura" class="ad-foto">
         </div>
         <p class="ad-texto">Dor intensa, contratura cervical severa, nariz amassado pela tensão muscular</p>
       </div>
@@ -2772,7 +2757,7 @@
       <div class="ad-col">
         <div class="ad-label ad-depois">Depois</div>
         <div class="ad-foto-wrap">
-          <img src="nicolas-pata.jpeg" alt="Nicolas pós-tratamento" class="ad-foto">
+          <img loading="lazy" src="nicolas-pata.jpeg" alt="Nicolas pós-tratamento" class="ad-foto">
         </div>
         <p class="ad-texto">Mobilidade recuperada, nariz no normal, coordenação dos membros restabelecida</p>
       </div>
@@ -2784,9 +2769,9 @@
 
     <div class="caso-card reveal">
       <div class="caso-foto-wrap">
-        <img src="gata-alívio-dor.jpeg" alt="Gata relaxando durante acupuntura" class="caso-foto">
+        <img loading="lazy" src="gata-alívio-dor.jpeg" alt="Gata relaxando durante acupuntura" class="caso-foto">
       </div>
-      <div class="caso-nome">Hebe</div>
+      <div class="caso-nome">Yume</div>
       <div class="caso-condicao">18 anos · Controle de dor e prevenção neurológica</div>
       <p class="caso-resultado">Senhorinha de 18 anos com tratamento contínuo para qualidade de vida na terceira idade — controle de dor, prevenção neurológica e bem-estar geral.</p>
       <span class="caso-badge">Qualidade de vida na velhice</span>
@@ -2794,7 +2779,7 @@
 
     <div class="caso-card reveal">
       <div class="caso-foto-wrap">
-        <img src="fifi.jpeg" alt="Fifi sendo atendida dentro da mochila" class="caso-foto">
+        <img loading="lazy" src="fifi.jpeg" alt="Fifi sendo atendida dentro da mochila" class="caso-foto">
       </div>
       <div class="caso-nome">Fifi</div>
       <div class="caso-condicao">Dor intensa + estresse · Idosa · Só aceita sessão na mochila 😄</div>
@@ -2804,27 +2789,17 @@
 
     <div class="caso-card reveal">
       <div class="caso-foto-wrap">
-        <img src="displasia.jpeg" alt="Cão com displasia coxofemoral" class="caso-foto">
-      </div>
-      <div class="caso-nome">Displasia Coxofemoral</div>
-      <div class="caso-condicao">Doença comum em cães de grande porte</div>
-      <p class="caso-resultado">Acupuntura, farmacopuntura e laserterapia combinados — redução expressiva da dor e melhora na mobilidade, sem sobrecarga medicamentosa.</p>
-      <span class="caso-badge">Protocolo especializado</span>
-    </div>
-
-    <div class="caso-card reveal">
-      <div class="caso-foto-wrap">
-        <img src="zoe.jpeg" alt="Zoe com acupuntura" class="caso-foto">
+        <img loading="lazy" src="zoe.jpeg" alt="Zoe com acupuntura" class="caso-foto">
       </div>
       <div class="caso-nome">Zoe</div>
-      <div class="caso-condicao">6 anos · Lama bilhar · Endocrinopatia · Instabilidade locomotora</div>
-      <p class="caso-resultado">Uma cadela muito levada e carismática que passou por trauma e desequilíbrio. Com acupuntura e acompanhamento integrativo, a lama bilhar sumiu e ela voltou a se mover melhor e a sorrir de novo.</p>
+      <div class="caso-condicao">6 anos · Endocrinopatia · Lama biliar · Saúde locomotora</div>
+      <p class="caso-resultado">Uma princesa fashion e carismática. Trabalhamos questões endócrinas e gástricas, e o último ultrassom mostrou remissão da lama biliar.</p>
       <span class="caso-badge">✅ Recuperação progressiva · 8+ sessões</span>
     </div>
 
     <div class="caso-card reveal">
       <div class="caso-foto-wrap">
-        <img src="coju.jpeg" alt="Cojocaru em sessão" class="caso-foto">
+        <img loading="lazy" src="coju.jpeg" alt="Cojocaru em sessão" class="caso-foto" style="object-position: center center;">
       </div>
       <div class="caso-nome">Cojocaru</div>
       <div class="caso-condicao">13 anos · Tratamento focado em emoção · Luto</div>
@@ -2834,7 +2809,17 @@
 
     <div class="caso-card reveal">
       <div class="caso-foto-wrap">
-        <img src="pr.jpeg" alt="Alina em sessão preventiva" class="caso-foto">
+        <img loading="lazy" src="gporte.jpeg" alt="Aragan Neném em sessão" class="caso-foto">
+      </div>
+      <div class="caso-nome">Aragan — "Neném"</div>
+      <div class="caso-condicao">Rottweiler 60kg · Anemia por hemoparasitose</div>
+      <p class="caso-resultado">Aragan, Rottweiler de 60 kg, conhecido como Neném. Uso da acupuntura no tratamento de anemia associada ao tratamento convencional — obtivemos um sucesso significativo.</p>
+      <span class="caso-badge">Sucesso comprovado</span>
+    </div>
+
+    <div class="caso-card reveal">
+      <div class="caso-foto-wrap">
+        <img loading="lazy" src="pr.jpeg" alt="Alina em sessão preventiva" class="caso-foto">
       </div>
       <div class="caso-nome">Alina</div>
       <div class="caso-condicao">13 anos · Preventivo semanal · Vitalidade</div>
@@ -2844,32 +2829,12 @@
 
     <div class="caso-card reveal">
       <div class="caso-foto-wrap">
-        <img src="renal.jpeg" alt="Tratamento renal em felino" class="caso-foto">
-      </div>
-      <div class="caso-nome">Gatos Renais</div>
-      <div class="caso-condicao">Insuficiência renal + anemia</div>
-      <p class="caso-resultado">Farmacopuntura com eritropoetina e fluido subcutâneo em pontos específicos — prolonga e melhora muito a qualidade de vida em felinos com doença renal crônica.</p>
-      <span class="caso-badge">Protocolo especializado</span>
-    </div>
-
-    <div class="caso-card reveal">
-      <div class="caso-foto-wrap">
-        <img src="filhotinho.jpeg" alt="Filhote em atendimento" class="caso-foto">
+        <img loading="lazy" src="filhotinho.jpeg" alt="Filhote em atendimento" class="caso-foto">
       </div>
       <div class="caso-nome">Filhotes</div>
       <div class="caso-condicao">Cuidado preventivo desde cedo</div>
       <p class="caso-resultado">A acupuntura não é só para animais doentes — o acompanhamento preventivo desde jovem fortalece o sistema imunológico e o desenvolvimento saudável.</p>
       <span class="caso-badge">Prevenção e saúde</span>
-    </div>
-
-    <div class="caso-card reveal">
-      <div class="caso-foto-wrap">
-        <img src="ela_com_o_cao_2.jpeg" alt="Dra. Viviane com cão branco" class="caso-foto">
-      </div>
-      <div class="caso-nome">Cães de Médio e Grande Porte</div>
-      <div class="caso-condicao">Dor articular · Pós-cirúrgico · Reabilitação</div>
-      <p class="caso-resultado">Raças grandes têm alta predisposição a doenças articulares. A acupuntura associada à laserterapia oferece alívio rápido e duradouro sem comprometer órgãos vitais.</p>
-      <span class="caso-badge">Reabilitação completa</span>
     </div>
 
   </div>
@@ -2880,7 +2845,7 @@
   <div class="videos-header">
     <div class="section-label reveal">Veja na prática</div>
     <h2 class="section-title reveal">O processo em <em>vídeo real</em></h2>
-    <p class="section-desc reveal">Atendimentos em consultório e <strong>domicílio</strong> — veja como a Dra. Viviane trabalha com cada animal, trazendo segurança, profissionalismo e conforto onde você estiver.</p>
+    <p class="section-desc reveal">Atendimentos 100% domiciliares — veja como a Dra. Viviane trabalha com cada animal, trazendo segurança, profissionalismo e conforto onde você estiver.</p>
     <p class="section-desc reveal">Acompanhe momentos reais de atendimento — como a acupuntura age no corpo do animal e a transformação que acontece durante a sessão.</p>
   </div>
 
@@ -2924,14 +2889,14 @@
           <span class="video-thumb-num">Vídeo 3</span>
         </div>
       </div>
-      <div class="video-thumb" data-title="Atendimento em cão" data-desc="Tratamento complementar com foco em controle de dor e bem-estar." onclick="iniciarVideo('processo3.mp4', this)">
-        <video src="processo3.mp4" preload="metadata" muted playsinline style="width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
+      <div class="video-thumb" data-title="Atendimento em vídeo" data-desc="Vídeo de acompanhamento do processo de tratamento em domicílio." onclick="iniciarVideo('mm.mp4', this)">
+        <video src="mm.mp4" preload="metadata" muted playsinline style="width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
         <div class="video-thumb-overlay">
           <div class="video-play-icon">▶</div>
           <span class="video-thumb-num">Vídeo 4</span>
         </div>
       </div>
-      <div class="video-thumb" data-title="Rottweiler (Neném)" data-desc="Tratamento com acupuntura para o Rottweiler Neném." onclick="iniciarVideo('processo4.mp4', this)">
+      <div class="video-thumb" data-title="Aragan — Rottweiler Neném" data-desc="Acupuntura para anemia associada ao tratamento convencional em Aragan, Rottweiler de 60 kg." onclick="iniciarVideo('processo4.mp4', this)">
         <video src="processo4.mp4" preload="metadata" muted playsinline style="width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
         <div class="video-thumb-overlay">
           <div class="video-play-icon">▶</div>
@@ -3001,61 +2966,69 @@
 
   <div class="galeria-grid">
     <div class="galeria-item reveal">
-      <img src="ela_com_gato_preto.jpeg" alt="Dra. Viviane com gato preto">
+      <img loading="lazy" src="ela_com_gato_preto.jpeg" alt="Dra. Viviane com gato preto">
       <div class="galeria-overlay"><span>O vínculo começa antes da agulha</span></div>
     </div>
     <div class="galeria-item reveal">
-      <img src="ela_com_o_cao_2.jpeg" alt="Dra. Viviane com cão branco">
+      <img loading="lazy" src="ela_com_o_cao_2.jpeg" alt="Dra. Viviane com cão branco">
       <div class="galeria-overlay"><span>Presença que acalma</span></div>
     </div>
     <div class="galeria-item reveal">
-      <img src="ela_com_gato_2.jpeg" alt="Dra. Viviane com gato no consultório">
+      <img loading="lazy" src="ela_com_gato_2.jpeg" alt="Dra. Viviane com gato">
       <div class="galeria-overlay"><span>Cuidado que vai além</span></div>
     </div>
     <div class="galeria-item reveal">
-      <img src="filhotinho.jpeg" alt="Dra. Viviane com filhote">
+      <img loading="lazy" src="filhotinho.jpeg" alt="Dra. Viviane com filhote">
       <div class="galeria-overlay"><span>De filhotes a idosos</span></div>
     </div>
 
     <div class="galeria-item reveal">
-      <img src="fifi.jpeg" alt="Fifi na mochila em atendimento">
+      <img loading="lazy" src="fifi.jpeg" alt="Fifi na mochila em atendimento">
       <div class="galeria-overlay"><span>Cada animal no seu tempo</span></div>
     </div>
         <div class="galeria-item reveal">
-      <img src="ela1.jpeg" alt="Fifi na mochila em atendimento">
+      <img loading="lazy" src="ela1.jpeg" alt="Fifi na mochila em atendimento">
       <div class="galeria-overlay"><span>Cada animal no seu tempo</span></div>
     </div>
         <div class="galeria-item reveal">
-      <img src="ela2.jpeg" alt="Fifi na mochila em atendimento">
+      <img loading="lazy" src="ela2.jpeg" alt="Fifi na mochila em atendimento">
       <div class="galeria-overlay"><span>Cada animal no seu tempo</span></div>
     </div>
         <div class="galeria-item reveal">
-      <img src="ela3.jpeg" alt="Fifi na mochila em atendimento">
+      <img loading="lazy" src="ela3.jpeg" alt="Fifi na mochila em atendimento">
       <div class="galeria-overlay"><span>Cada animal no seu tempo</span></div>
     </div>
         <div class="galeria-item reveal">
-      <img src="ela4.jpeg" alt="Fifi na mochila em atendimento">
+      <img loading="lazy" src="ela4.jpeg" alt="Fifi na mochila em atendimento">
       <div class="galeria-overlay"><span>Cada animal no seu tempo</span></div>
     </div>
 
     <div class="galeria-item reveal">
-      <img src="c2.jpeg" alt="Cuidado que você vai ter" />
+      <img loading="lazy" src="c2.jpeg" alt="Cuidado que você vai ter" />
       <div class="galeria-overlay"><span>O cuidado que você vai ter</span></div>
     </div>
     <div class="galeria-item reveal">
-      <img src="coj.jpeg" alt="Atendimento emocional e energético" />
+      <img loading="lazy" src="cromo.jpeg" alt="Cromoterapia" />
+      <div class="galeria-overlay"><span>Cromoterapia: luz e cor para equilíbrio</span></div>
+    </div>
+    <div class="galeria-item reveal">
+      <img loading="lazy" src="cui.jpeg" alt="O cuidado que você vai ter" />
+      <div class="galeria-overlay"><span>O cuidado que você vai ter</span></div>
+    </div>
+    <div class="galeria-item reveal">
+      <img loading="lazy" src="coj.jpeg" alt="Atendimento emocional e energético" />
       <div class="galeria-overlay"><span>Recuperação emocional em foco</span></div>
     </div>
     <div class="galeria-item reveal">
-      <img src="pr.jpeg" alt="Rotina preventiva com acupuntura" />
+      <img loading="lazy" src="pr.jpeg" alt="Rotina preventiva com acupuntura" />
       <div class="galeria-overlay"><span>Rotina preventiva</span></div>
     </div>
     <div class="galeria-item reveal">
-      <img src="pre.jpeg" alt="Sessão preventiva com vitalidade" />
+      <img loading="lazy" src="pre.jpeg" alt="Sessão preventiva com vitalidade" />
       <div class="galeria-overlay"><span>Vitalidade semanal</span></div>
     </div>
     <div class="galeria-item reveal">
-      <img src="zoe.jpeg" alt="Zoe em sessão de tratamento" />
+      <img loading="lazy" src="zoe.jpeg" alt="Zoe em sessão de tratamento" />
       <div class="galeria-overlay"><span>O cuidado que você vai ter</span></div>
     </div>
   </div>
@@ -3072,53 +3045,56 @@
   <div class="eu-eles-mosaico reveal">
 
     <div class="eu-eles-item">
-      <img src="ela_com_gato_preto.jpeg" alt="Dra. Viviane com gato preto" style="object-position: center 20%;">
+      <img loading="lazy" src="ela_com_gato_preto.jpeg" alt="Dra. Viviane com gato preto" style="object-position: center 20%;">
       <div class="eu-eles-overlay"><span>O vínculo que cura começa aqui</span></div>
     </div>
 
     <div class="eu-eles-item">
-      <img src="ela_com_o_cao.jpeg" alt="Dra. Viviane com cão" style="object-position: center 30%;">
+      <img loading="lazy" src="ela_com_o_cao.jpeg" alt="Dra. Viviane com cão" style="object-position: center 30%;">
       <div class="eu-eles-overlay"><span>Presença que acalma</span></div>
     </div>
 
     <div class="eu-eles-item">
-      <img src="ela_com_o_cao_2.jpeg" alt="Dra. Viviane com cão branco" style="object-position: center top;">
+      <img loading="lazy" src="ela_com_o_cao_2.jpeg" alt="Dra. Viviane com cão branco" style="object-position: center top;">
       <div class="eu-eles-overlay"><span>Cada animal tem sua linguagem</span></div>
     </div>
 
     <div class="eu-eles-item">
-      <img src="ela_com_gato_2.jpeg" alt="Dra. Viviane com gato" style="object-position: center top;">
+      <img loading="lazy" src="ela_com_gato_2.jpeg" alt="Dra. Viviane com gato" style="object-position: center top;">
       <div class="eu-eles-overlay"><span>Confiança construída sessão a sessão</span></div>
     </div>
 
     <div class="eu-eles-item">
-      <img src="ela_com_gato_3.jpeg" alt="Dra. Viviane com gato preto e branco" style="object-position: center top;">
+      <img loading="lazy" src="ela_com_gato_3.jpeg" alt="Dra. Viviane com gato preto e branco" style="object-position: center top;">
       <div class="eu-eles-overlay"><span>Cuidado que vai além da técnica</span></div>
     </div>
 
     <div class="eu-eles-item">
-      <img src="fifi.jpeg" alt="Fifi na mochila em atendimento" style="object-position: center center;">
+      <img loading="lazy" src="fifi.jpeg" alt="Fifi na mochila em atendimento" style="object-position: center center;">
       <div class="eu-eles-overlay"><span>Cada animal no seu tempo</span></div>
     </div>
 
     <div class="eu-eles-item">
-      <img src="eueazoe.jpeg" alt="Zoe durante tratamento" style="object-position: center 75%;">
+      <img loading="lazy" src="eueazoe.jpeg" alt="Zoe durante tratamento" style="object-position: center 75%;">
       <div class="eu-eles-overlay"><span>Zoe, 6 anos: reequilíbrio emocional e físico</span></div>
+    </div>
+
+    <div class="eu-eles-item">
+      <img loading="lazy" src="elee.jpeg" alt="Atendimento domiciliar com cuidado emocional" style="object-position: center center;">
+      <div class="eu-eles-overlay"><span>Presença calma e acolhimento durante a sessão</span></div>
     </div>
 
   </div>
 
-  <div class="eu-eles-texto-card reveal" style="max-width:1100px;margin:0 auto 40px;background:var(--verde);color:#fff;border-radius:22px;padding:30px;">
-    <p class="quote-icon">“</p>
-    <p class="eu-eles-frase" style="color:#fff;">Zoe é uma cadela de 6 anos que veio com lama bilhar, endocrinopatia e instabilidade locomotora. Ela também carregava um trauma emocional forte após presenciar a perda de um amigo. Com acupuntura e acompanhamento integrativo, a lama sumiu e ela está voltando a ser a cachorra feliz de antes.</p>
-    <p class="eu-eles-assinatura" style="color:rgba(255,255,255,0.8);">Reequilíbrio energético e emocional com Medicina Tradicional Chinesa.</p>
+  <div class="eu-eles-casos reveal" style="max-width:1100px;margin:0 auto 60px;">
+    <div class="atendimento-card">
+      <p class="atendimento-card-text">🏠 <strong>Atendimento domiciliar completo</strong> — acupuntura, fluidoterapia e acompanhamento contínuo com menos estresse para seu animal. Medicina Veterinária Clínica, Acupuntura Veterinária, Terapias Integrativas, Fluidoterapia e Atendimento Domiciliar para cães e gatos.</p>
+    </div>
   </div>
 
   <!-- Frase final -->
   <div style="text-align:center;max-width:640px;margin:0 auto" class="reveal">
-    <p style="font-family:'Playfair Display',serif;font-size:1.15rem;font-style:italic;color:var(--verde);line-height:1.7;">"Trago comigo mais de 30 anos de amor pelos animais — e uma carreira inteira construída para cuidar deles da forma que eles merecem."</p>
-    <p style="margin-top:14px;font-size:0.85rem;color:var(--texto-suave);font-weight:300;">— Dra. Viviane · Médica Veterinária & Acupunturista</p>
-    <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Viviane!%20Vi%20as%20fotos%20e%20vídeos%20do%20site%20e%20quero%20agendar%20uma%20consulta." target="_blank" class="btn-primary" style="margin-top:32px;display:inline-flex;">
+    <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Viviane!%20Vi%20as%20fotos%20e%20vídeos%20do%20site%20e%20quero%20agendar%20uma%20consulta." target="_blank" rel="noopener" class="btn-primary" style="margin-top:32px;display:inline-flex;">
       💬 Quero esse cuidado para o meu pet
     </a>
   </div>
@@ -3127,7 +3103,7 @@
 <!-- DEPOIMENTOS -->
 <section class="section depoimentos-section" id="depoimentos">
   <div class="depoimentos-header">
-    <div class="section-label reveal">O que dizem os tutores</div>
+    <div class="section-label reveal">O que dizem os responsáveis</div>
     <h2 class="section-title reveal">Palavras de quem <em>viveu</em> na prática</h2>
     <p class="section-desc reveal">Cada depoimento é uma história real de cuidado, dedicação e resultado.</p>
   </div>
@@ -3137,12 +3113,12 @@
 
     <div class="depoimento-card reveal">
       <div class="depoimento-estrelas">★★★★★</div>
-      <p class="depoimento-texto">"Minha gata Hebe tem 18 anos e chegou com muito desconforto. Depois de poucos meses de sessões com a Dra. Viviane, a melhora foi nítida — ela voltou a se movimentar com leveza e ficou muito mais tranquila. Só gratidão."</p>
+      <p class="depoimento-texto">"Minha gata Yume tem 18 anos e chegou com muito desconforto. Depois de poucos meses de sessões com a Dra. Viviane, a melhora foi nítida — ela voltou a se movimentar com leveza e ficou muito mais tranquila. Só gratidão."</p>
       <div class="depoimento-autor">
         <div class="depoimento-avatar">M</div>
         <div>
           <div class="depoimento-nome">Márcia R.</div>
-          <div class="depoimento-pet">Tutora da Hebe · 18 anos</div>
+          <div class="depoimento-pet">Responsável da Yume · 18 anos</div>
         </div>
       </div>
     </div>
@@ -3154,7 +3130,7 @@
         <div class="depoimento-avatar">F</div>
         <div>
           <div class="depoimento-nome">Fernanda P.</div>
-          <div class="depoimento-pet">Tutora do Nicolas · Golden Retriever</div>
+          <div class="depoimento-pet">Responsável do Nicolas · Golden Retriever</div>
         </div>
       </div>
     </div>
@@ -3166,7 +3142,7 @@
         <div class="depoimento-avatar">R</div>
         <div>
           <div class="depoimento-nome">Ricardo S.</div>
-          <div class="depoimento-pet">Tutor do Simba · Gato persa</div>
+          <div class="depoimento-pet">Responsável do Simba · Gato persa</div>
         </div>
       </div>
     </div>
@@ -3178,7 +3154,7 @@
         <div class="depoimento-avatar">A</div>
         <div>
           <div class="depoimento-nome">Ana Carolina M.</div>
-          <div class="depoimento-pet">Tutora da Luna · Labrador</div>
+          <div class="depoimento-pet">Responsável da Luna · Labrador</div>
         </div>
       </div>
     </div>
@@ -3190,7 +3166,7 @@
         <div class="depoimento-avatar">P</div>
         <div>
           <div class="depoimento-nome">Patrícia L.</div>
-          <div class="depoimento-pet">Tutora do Toddy · Poodle 14 anos</div>
+          <div class="depoimento-pet">Responsável do Toddy · Poodle 14 anos</div>
         </div>
       </div>
     </div>
@@ -3202,7 +3178,7 @@
         <div class="depoimento-avatar">T</div>
         <div>
           <div class="depoimento-nome">Tatiane B.</div>
-          <div class="depoimento-pet">Tutora do Kiko · Gato SRD</div>
+          <div class="depoimento-pet">Responsável do Kiko · Gato SRD</div>
         </div>
       </div>
     </div>
@@ -3214,7 +3190,7 @@
         <div class="depoimento-avatar">C</div>
         <div>
           <div class="depoimento-nome">Camila F.</div>
-          <div class="depoimento-pet">Tutora da Bella · Dachshund</div>
+          <div class="depoimento-pet">Responsável da Bella · Dachshund</div>
         </div>
       </div>
     </div>
@@ -3226,7 +3202,7 @@
         <div class="depoimento-avatar">G</div>
         <div>
           <div class="depoimento-nome">Gustavo M.</div>
-          <div class="depoimento-pet">Tutor do Thor · Border Collie</div>
+          <div class="depoimento-pet">Responsável do Thor · Border Collie</div>
         </div>
       </div>
     </div>
@@ -3238,7 +3214,7 @@
         <div class="depoimento-avatar">J</div>
         <div>
           <div class="depoimento-nome">Juliana C.</div>
-          <div class="depoimento-pet">Tutora da Frida · Gata 16 anos</div>
+          <div class="depoimento-pet">Responsável da Frida · Gata 16 anos</div>
         </div>
       </div>
     </div>
@@ -3250,7 +3226,7 @@
         <div class="depoimento-avatar">L</div>
         <div>
           <div class="depoimento-nome">Leonardo A.</div>
-          <div class="depoimento-pet">Tutor do Zé · Buldogue Francês</div>
+          <div class="depoimento-pet">Responsável do Zé · Buldogue Francês</div>
         </div>
       </div>
     </div>
@@ -3262,7 +3238,7 @@
         <div class="depoimento-avatar">V</div>
         <div>
           <div class="depoimento-nome">Vanessa O.</div>
-          <div class="depoimento-pet">Tutora da Mel · Gata 17 anos</div>
+          <div class="depoimento-pet">Responsável da Mel · Gata 17 anos</div>
         </div>
       </div>
     </div>
@@ -3274,7 +3250,7 @@
         <div class="depoimento-avatar">R</div>
         <div>
           <div class="depoimento-nome">Roberto N.</div>
-          <div class="depoimento-pet">Tutor do Rex · Pastor Alemão</div>
+          <div class="depoimento-pet">Responsável do Rex · Pastor Alemão</div>
         </div>
       </div>
     </div>
@@ -3286,7 +3262,7 @@
         <div class="depoimento-avatar">S</div>
         <div>
           <div class="depoimento-nome">Sandra T.</div>
-          <div class="depoimento-pet">Tutora do Loki · Gato SRD</div>
+          <div class="depoimento-pet">Responsável do Loki · Gato SRD</div>
         </div>
       </div>
     </div>
@@ -3298,7 +3274,7 @@
         <div class="depoimento-avatar">E</div>
         <div>
           <div class="depoimento-nome">Elaine K.</div>
-          <div class="depoimento-pet">Tutora da Nina · Shih Tzu</div>
+          <div class="depoimento-pet">Responsável da Nina · Shih Tzu</div>
         </div>
       </div>
     </div>
@@ -3310,7 +3286,7 @@
         <div class="depoimento-avatar">D</div>
         <div>
           <div class="depoimento-nome">Diego H.</div>
-          <div class="depoimento-pet">Tutor do Apolo · Labrador</div>
+          <div class="depoimento-pet">Responsável do Apolo · Labrador</div>
         </div>
       </div>
     </div>
@@ -3322,7 +3298,7 @@
         <div class="depoimento-avatar">I</div>
         <div>
           <div class="depoimento-nome">Isabela R.</div>
-          <div class="depoimento-pet">Tutora da Cleo · Gata Siamesa</div>
+          <div class="depoimento-pet">Responsável da Cleo · Gata Siamesa</div>
         </div>
       </div>
     </div>
@@ -3334,7 +3310,7 @@
         <div class="depoimento-avatar">B</div>
         <div>
           <div class="depoimento-nome">Beatriz W.</div>
-          <div class="depoimento-pet">Tutora do Mel e do Caju · 13 e 15 anos</div>
+          <div class="depoimento-pet">Responsável do Mel e do Caju · 13 e 15 anos</div>
         </div>
       </div>
     </div>
@@ -3346,19 +3322,19 @@
         <div class="depoimento-avatar">M</div>
         <div>
           <div class="depoimento-nome">Marcos V.</div>
-          <div class="depoimento-pet">Tutor do Bóris · Gato Maine Coon</div>
+          <div class="depoimento-pet">Responsável do Bóris · Gato Maine Coon</div>
         </div>
       </div>
     </div>
 
     <div class="depoimento-card reveal">
       <div class="depoimento-estrelas">★★★★★</div>
-      <p class="depoimento-texto">"Indico para todos os tutores que conheço. A Dra. Viviane tem uma formação rarissíma — psicóloga, veterinária e acupunturista — e isso faz toda a diferença no atendimento. Ela entende o animal e entende o tutor. Simplesmente única."</p>
+      <p class="depoimento-texto">"Indico para todos os responsáveis que conheço. A Dra. Viviane tem uma formação raríssima — psicóloga, veterinária e acupunturista — e isso faz toda a diferença no atendimento. Ela entende o animal e entende o responsável. Simplesmente única."</p>
       <div class="depoimento-autor">
         <div class="depoimento-avatar">A</div>
         <div>
           <div class="depoimento-nome">Aline S.</div>
-          <div class="depoimento-pet">Tutora da Pitanga · Gata SRD</div>
+          <div class="depoimento-pet">Responsável da Pitanga · Gata SRD</div>
         </div>
       </div>
     </div>
@@ -3378,7 +3354,7 @@
 <section class="section faq-section" id="faq">
   <div class="faq-header">
     <div class="section-label reveal">Dúvidas frequentes</div>
-    <h2 class="section-title reveal">Perguntas que os tutores <em>sempre fazem</em></h2>
+    <h2 class="section-title reveal">Perguntas que os responsáveis <em>sempre fazem</em></h2>
     <p class="section-desc reveal">Respostas diretas para você chegar à consulta com mais tranquilidade.</p>
   </div>
 
@@ -3420,7 +3396,7 @@
         <span class="faq-icone">+</span>
       </button>
       <div class="faq-resposta">
-        <p>Sim! O implante de catgut e a farmacopuntura são justamente pensados para tutores que não podem vir semanalmente. Com essas técnicas, é possível fazer protocolos mensais — o animal recebe o tratamento de forma contínua mesmo entre consultas, sem precisar se deslocar com frequência.</p>
+        <p>Sim! O implante de catgut e a farmacopuntura são justamente pensados para responsáveis que não podem vir semanalmente. Com essas técnicas, é possível fazer protocolos mensais — o animal recebe o tratamento de forma contínua mesmo entre consultas, sem precisar se deslocar com frequência.</p>
       </div>
     </div>
 
@@ -3452,22 +3428,14 @@
   <div class="localizacao-grid">
 
     <div class="localizacao-info">
-      <div class="section-label reveal">Onde nos encontrar</div>
-      <h2 class="section-title reveal">Venha visitar o <em>consultório</em></h2>
+      <div class="section-label reveal">Contato e atendimento</div>
+      <h2 class="section-title reveal">Atendimento 100% domiciliar</h2>
 
       <div class="local-item reveal">
         <div class="local-icone">📍</div>
         <div>
-          <div class="local-titulo">Endereço</div>
-          <p class="local-desc">Rua [ENDEREÇO COMPLETO]<br>Bairro — Cidade/SP<br>CEP: [CEP]</p>
-          <div class="local-btns">
-            <a href="https://maps.google.com/?q=Dra+Viviane+Acupuntura+Veterinaria" target="_blank" class="local-btn-mapa">
-              📍 Google Maps
-            </a>
-            <a href="https://waze.com/ul?q=Dra+Viviane+Acupuntura+Veterinaria" target="_blank" class="local-btn-mapa local-btn-waze">
-              🚗 Waze
-            </a>
-          </div>
+          <div class="local-titulo">Área de atendimento</div>
+          <p class="local-desc">Visitas domiciliares em São Paulo/SP e região metropolitana. O atendimento é realizado no lar do animal para menor estresse e mais conforto.</p>
         </div>
       </div>
 
@@ -3484,7 +3452,7 @@
         <div>
           <div class="local-titulo">WhatsApp</div>
           <p class="local-desc">(11) 94308-3814</p>
-          <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Viviane!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" class="local-btn-mapa" style="margin-top:8px">
+          <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Viviane!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener" class="local-btn-mapa" style="margin-top:8px">
             💬 Iniciar conversa
           </a>
         </div>
@@ -3496,7 +3464,7 @@
       <div class="contato-direto-icon">🐾</div>
       <h3 class="contato-direto-titulo">Agende pelo WhatsApp</h3>
       <p class="contato-direto-desc">A forma mais rápida de marcar uma consulta é direto pelo WhatsApp. A Dra. Viviane responde pessoalmente.</p>
-      <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Viviane!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20para%20o%20meu%20pet." target="_blank" class="contato-wa-btn">
+      <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Viviane!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20para%20o%20meu%20pet." target="_blank" rel="noopener" class="contato-wa-btn">
         💬 Falar agora no WhatsApp
       </a>
       <p class="contato-direto-info">Resposta rápida · Atendimento humanizado</p>
@@ -3514,10 +3482,10 @@
   <p class="cta-desc reveal">
     Entre em contato agora. Vamos conversar sobre o caso do seu pet — sem compromisso — e entender como a acupuntura veterinária pode ajudá-lo.
   </p>
-  <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Viviane!%20Vi%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20acupuntura%20veterinária%20para%20o%20meu%20pet." class="cta-btn reveal" target="_blank">
+  <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Viviane!%20Vi%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20acupuntura%20veterinária%20para%20o%20meu%20pet." class="cta-btn reveal" target="_blank" rel="noopener">
     💬 Agendar pelo WhatsApp
   </a>
-  <p class="cta-info reveal">Atendimento presencial · Protocolo para outras cidades disponível</p>
+  <p class="cta-info reveal">Atendimento domiciliar · Protocolo para outras cidades disponível</p>
 </section>
 
 <!-- FOOTER -->
@@ -3538,14 +3506,14 @@
 </footer>
 
 <!-- WHATSAPP FIXO (canto inferior direito) -->
-<a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Viviane!%20Quero%20saber%20mais%20sobre%20acupuntura%20veterinária." class="whatsapp-fixed" target="_blank" title="Falar no WhatsApp">
+<a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Viviane!%20Quero%20saber%20mais%20sobre%20acupuntura%20veterinária." class="whatsapp-fixed" target="_blank" rel="noopener" title="Falar no WhatsApp">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="30" height="30" fill="white">
     <path d="M16 2C8.268 2 2 8.268 2 16c0 2.49.65 4.83 1.79 6.87L2 30l7.35-1.77A13.94 13.94 0 0 0 16 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm0 25.5a11.44 11.44 0 0 1-5.83-1.6l-.42-.25-4.36 1.05 1.08-4.24-.27-.44A11.47 11.47 0 0 1 4.5 16C4.5 9.648 9.648 4.5 16 4.5S27.5 9.648 27.5 16 22.352 27.5 16 27.5zm6.29-8.43c-.34-.17-2.02-1-2.33-1.11-.32-.12-.55-.17-.78.17-.23.34-.9 1.11-1.1 1.34-.2.23-.41.26-.75.09-.34-.17-1.44-.53-2.74-1.69-1.01-.9-1.7-2.02-1.9-2.36-.2-.34-.02-.52.15-.69.15-.15.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.09-.17-.78-1.88-1.07-2.57-.28-.68-.57-.59-.78-.6h-.67c-.23 0-.6.09-.91.43-.32.34-1.2 1.17-1.2 2.86s1.23 3.32 1.4 3.55c.17.23 2.42 3.7 5.87 5.19.82.35 1.46.56 1.96.72.82.26 1.57.22 2.16.13.66-.1 2.02-.83 2.31-1.62.28-.8.28-1.48.2-1.62-.09-.14-.32-.23-.66-.4z"/>
   </svg>
 </a>
 
 <!-- WHATSAPP LATERAL (meio da tela, lado direito) -->
-<a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Viviane!%20Gostaria%20de%20agendar%20uma%20consulta%20para%20o%20meu%20pet." class="whatsapp-mid" target="_blank" title="Agendar consulta">
+<a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Viviane!%20Gostaria%20de%20agendar%20uma%20consulta%20para%20o%20meu%20pet." class="whatsapp-mid" target="_blank" rel="noopener" title="Agendar consulta">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="20" height="20" fill="white">
     <path d="M16 2C8.268 2 2 8.268 2 16c0 2.49.65 4.83 1.79 6.87L2 30l7.35-1.77A13.94 13.94 0 0 0 16 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm0 25.5a11.44 11.44 0 0 1-5.83-1.6l-.42-.25-4.36 1.05 1.08-4.24-.27-.44A11.47 11.47 0 0 1 4.5 16C4.5 9.648 9.648 4.5 16 4.5S27.5 9.648 27.5 16 22.352 27.5 16 27.5zm6.29-8.43c-.34-.17-2.02-1-2.33-1.11-.32-.12-.55-.17-.78.17-.23.34-.9 1.11-1.1 1.34-.2.23-.41.26-.75.09-.34-.17-1.44-.53-2.74-1.69-1.01-.9-1.7-2.02-1.9-2.36-.2-.34-.02-.52.15-.69.15-.15.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.09-.17-.78-1.88-1.07-2.57-.28-.68-.57-.59-.78-.6h-.67c-.23 0-.6.09-.91.43-.32.34-1.2 1.17-1.2 2.86s1.23 3.32 1.4 3.55c.17.23 2.42 3.7 5.87 5.19.82.35 1.46.56 1.96.72.82.26 1.57.22 2.16.13.66-.1 2.02-.83 2.31-1.62.28-.8.28-1.48.2-1.62-.09-.14-.32-.23-.66-.4z"/>
   </svg> <span class="wa-label">Agendar agora</span>
