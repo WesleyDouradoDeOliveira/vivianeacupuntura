@@ -1815,13 +1815,16 @@
 
   .antes-depois {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 24px;
     justify-content: center;
     margin-bottom: 24px;
   }
 
   .ad-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     flex: 1;
     max-width: 320px;
   }
@@ -1846,13 +1849,15 @@
     aspect-ratio: 4/3;
     background: rgba(255,255,255,0.1);
     border: 2px solid rgba(255,255,255,0.15);
+    min-height: 260px;
   }
 
   .ad-foto {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
+    display: block;
   }
 
   .ad-texto {
