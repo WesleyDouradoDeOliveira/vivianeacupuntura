@@ -8,7 +8,16 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'AW-18244917161');
+  gtag('config', 'AW-18244917161'); // ID verificado
+
+  // Função para disparar conversão de Contato
+  function disparaConversaoContato() {
+    gtag('event', 'conversion', {
+      'send_to': 'AW-18244917161/--7QCMrq7sMcEKmv7ftD',
+      'value': 1.0,
+      'currency': 'BRL'
+    });
+  }
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -2579,7 +2588,7 @@
     <a href="#faq" class="nav-link">FAQ</a>
     <a href="#contato" class="nav-link">Contato</a>
   </div>
-  <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Vivi%20Neves!%20Quero%20saber%20mais%20sobre%20acupuntura%20veterinária." class="nav-cta" target="_blank" rel="noopener">Agendar consulta →</a>
+  <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Vivi%20Neves!%20Quero%20saber%20mais%20sobre%20acupuntura%20veterinária." class="nav-cta" onclick="disparaConversaoContato()" target="_blank" rel="noopener">Agendar consulta →</a>
   <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
@@ -2594,7 +2603,7 @@
   <a href="#eu-eles" class="nav-mobile-link" onclick="closeMenu()">❤️ Eu & Eles</a>
   <a href="#faq" class="nav-mobile-link" onclick="closeMenu()">❓ Perguntas Frequentes</a>
   <a href="#contato" class="nav-mobile-link" onclick="closeMenu()">📍 Contato & Localização</a>
-  <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Vivi%20Neves!%20Quero%20agendar%20uma%20consulta." class="nav-mobile-wa" target="_blank" rel="noopener" onclick="closeMenu()">
+  <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Vivi%20Neves!%20Quero%20agendar%20uma%20consulta." class="nav-mobile-wa" target="_blank" rel="noopener" onclick="closeMenu(); disparaConversaoContato()">
     💬 Agendar pelo WhatsApp
   </a>
 </div>
@@ -2618,7 +2627,7 @@
     </p>
 
     <div class="hero-ctas">
-      <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Vivi%20Neves!%20Quero%20agendar%20uma%20consulta." class="btn-primary" target="_blank" rel="noopener">
+      <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Vivi%20Neves!%20Quero%20agendar%20uma%20consulta." class="btn-primary" onclick="disparaConversaoContato()" target="_blank" rel="noopener">
         💬 Falar com a Dra. Vivi Neves
       </a>
       <a href="#servicos" class="btn-secondary">
@@ -2669,7 +2678,7 @@
     <h2 class="section-title">Terapias integradas<br>para o bem-estar do <em>seu animal</em></h2>
     <p class="section-desc">Médica Veterinária Clínica com atendimento domiciliar. ✓ Protocolos integrativos para resultado mais seguro, responsável mais confiante e cuidado total com seu animal. Todos os serviços são realizados em domicílio.</p>
     <div style="text-align:center; margin-top:24px;">
-      <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Vivi%20Neves!%20Quero%20uma%20avaliação%20para%20meu%20pet." class="btn-primary" target="_blank" rel="noopener" style="max-width:280px;">
+      <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Vivi%20Neves!%20Quero%20uma%20avaliação%20para%20meu%20pet." class="btn-primary" onclick="disparaConversaoContato()" target="_blank" rel="noopener" style="max-width:280px;">
         💬 Avaliação rápida no WhatsApp
       </a>
     </div>
@@ -2858,7 +2867,7 @@
     <p class="section-desc reveal">Casos acompanhados com dedicação, paciência e uma ciência que funciona.</p>
     <p class="section-quote reveal" style="max-width:720px; margin:24px auto 0; color:var(--verde) !important; font-size:1.15rem; line-height:1.9; font-weight:600;">Nós, seres humanos, estamos na natureza para auxiliar o progresso dos animais, na mesma proporção que os anjos estão para nos auxiliar.</p>
     <div style="text-align:center; margin-top:20px;">
-      <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Vivi%20Neves!%20Quero%20saber%20se%20a%20acupuntura%20é%20certa%20para%20meu%20pet." class="btn-secondary" target="_blank" rel="noopener" style="padding:12px 26px;">
+      <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Vivi%20Neves!%20Quero%20saber%20se%20a%20acupuntura%20é%20certa%20para%20meu%20pet." class="btn-secondary" onclick="disparaConversaoContato()" target="_blank" rel="noopener" style="padding:12px 26px;">
         📲 Quero conversar com a Dra. Vivi Neves
       </a>
     </div>
@@ -3190,7 +3199,7 @@
 
   <!-- Frase final -->
   <div style="text-align:center;max-width:640px;margin:0 auto" class="reveal">
-    <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Vivi%20Neves!%20Vi%20as%20fotos%20e%20vídeos%20do%20site%20e%20quero%20agendar%20uma%20consulta." target="_blank" rel="noopener" class="btn-primary" style="margin-top:32px;display:inline-flex;">
+    <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Vivi%20Neves!%20Vi%20as%20fotos%20e%20vídeos%20do%20site%20e%20quero%20agendar%20uma%20consulta." target="_blank" rel="noopener" class="btn-primary" onclick="disparaConversaoContato()" style="margin-top:32px;display:inline-flex;">
       💬 Quero esse cuidado para o meu pet
     </a>
   </div>
@@ -3447,7 +3456,7 @@
         <div>
           <div class="local-titulo">WhatsApp</div>
           <p class="local-desc">(11) 94308-3814</p>
-          <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Vivi%20Neves!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener" class="local-btn-mapa" style="margin-top:8px">
+          <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Vivi%20Neves!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener" class="local-btn-mapa" onclick="disparaConversaoContato()" style="margin-top:8px">
             💬 Iniciar conversa
           </a>
         </div>
@@ -3459,7 +3468,7 @@
       <div class="contato-direto-icon">🐾</div>
       <h3 class="contato-direto-titulo">Agende pelo WhatsApp</h3>
       <p class="contato-direto-desc">A forma mais rápida de marcar uma consulta é direto pelo WhatsApp. A Dra. Vivi Neves responde pessoalmente.</p>
-      <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Vivi%20Neves!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20para%20o%20meu%20pet." target="_blank" rel="noopener" class="contato-wa-btn">
+      <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Vivi%20Neves!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20para%20o%20meu%20pet." target="_blank" rel="noopener" class="contato-wa-btn" onclick="disparaConversaoContato()">
         💬 Falar agora no WhatsApp
       </a>
       <p class="contato-direto-info">Resposta rápida · Atendimento humanizado</p>
@@ -3477,7 +3486,7 @@
   <p class="cta-desc reveal">
     Entre em contato agora. Vamos conversar sobre o caso do seu pet — sem compromisso — e entender como a acupuntura veterinária pode ajudá-lo.
   </p>
-  <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Vivi%20Neves!%20Vi%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20acupuntura%20veterinária%20para%20o%20meu%20pet." class="cta-btn reveal" target="_blank" rel="noopener">
+  <a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Vivi%20Neves!%20Vi%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20acupuntura%20veterinária%20para%20o%20meu%20pet." class="cta-btn reveal" onclick="disparaConversaoContato()" target="_blank" rel="noopener">
     💬 Agendar pelo WhatsApp
   </a>
   <p class="cta-info reveal">Atendimento domiciliar · Protocolo para outras cidades disponível</p>
@@ -3502,14 +3511,14 @@
 </footer>
 
 <!-- WHATSAPP FIXO (canto inferior direito) -->
-<a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Vivi%20Neves!%20Quero%20saber%20mais%20sobre%20acupuntura%20veterinária." class="whatsapp-fixed" target="_blank" rel="noopener" title="Falar no WhatsApp">
+<a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Vivi%20Neves!%20Quero%20saber%20mais%20sobre%20acupuntura%20veterinária." class="whatsapp-fixed" onclick="disparaConversaoContato()" target="_blank" rel="noopener" title="Falar no WhatsApp">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="30" height="30" fill="white">
     <path d="M16 2C8.268 2 2 8.268 2 16c0 2.49.65 4.83 1.79 6.87L2 30l7.35-1.77A13.94 13.94 0 0 0 16 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm0 25.5a11.44 11.44 0 0 1-5.83-1.6l-.42-.25-4.36 1.05 1.08-4.24-.27-.44A11.47 11.47 0 0 1 4.5 16C4.5 9.648 9.648 4.5 16 4.5S27.5 9.648 27.5 16 22.352 27.5 16 27.5zm6.29-8.43c-.34-.17-2.02-1-2.33-1.11-.32-.12-.55-.17-.78.17-.23.34-.9 1.11-1.1 1.34-.2.23-.41.26-.75.09-.34-.17-1.44-.53-2.74-1.69-1.01-.9-1.7-2.02-1.9-2.36-.2-.34-.02-.52.15-.69.15-.15.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.09-.17-.78-1.88-1.07-2.57-.28-.68-.57-.59-.78-.6h-.67c-.23 0-.6.09-.91.43-.32.34-1.2 1.17-1.2 2.86s1.23 3.32 1.4 3.55c.17.23 2.42 3.7 5.87 5.19.82.35 1.46.56 1.96.72.82.26 1.57.22 2.16.13.66-.1 2.02-.83 2.31-1.62.28-.8.28-1.48.2-1.62-.09-.14-.32-.23-.66-.4z"/>
   </svg>
 </a>
 
 <!-- WHATSAPP LATERAL (meio da tela, lado direito) -->
-<a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Vivi%20Neves!%20Gostaria%20de%20agendar%20uma%20consulta%20para%20o%20meu%20pet." class="whatsapp-mid" target="_blank" rel="noopener" title="Agendar consulta">
+<a href="https://wa.me/5511943083814?text=Olá%2C%20Dra.%20Vivi%20Neves!%20Gostaria%20de%20agendar%20uma%20consulta%20para%20o%20meu%20pet." class="whatsapp-mid" onclick="disparaConversaoContato()" target="_blank" rel="noopener" title="Agendar consulta">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="20" height="20" fill="white">
     <path d="M16 2C8.268 2 2 8.268 2 16c0 2.49.65 4.83 1.79 6.87L2 30l7.35-1.77A13.94 13.94 0 0 0 16 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm0 25.5a11.44 11.44 0 0 1-5.83-1.6l-.42-.25-4.36 1.05 1.08-4.24-.27-.44A11.47 11.47 0 0 1 4.5 16C4.5 9.648 9.648 4.5 16 4.5S27.5 9.648 27.5 16 22.352 27.5 16 27.5zm6.29-8.43c-.34-.17-2.02-1-2.33-1.11-.32-.12-.55-.17-.78.17-.23.34-.9 1.11-1.1 1.34-.2.23-.41.26-.75.09-.34-.17-1.44-.53-2.74-1.69-1.01-.9-1.7-2.02-1.9-2.36-.2-.34-.02-.52.15-.69.15-.15.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.09-.17-.78-1.88-1.07-2.57-.28-.68-.57-.59-.78-.6h-.67c-.23 0-.6.09-.91.43-.32.34-1.2 1.17-1.2 2.86s1.23 3.32 1.4 3.55c.17.23 2.42 3.7 5.87 5.19.82.35 1.46.56 1.96.72.82.26 1.57.22 2.16.13.66-.1 2.02-.83 2.31-1.62.28-.8.28-1.48.2-1.62-.09-.14-.32-.23-.66-.4z"/>
   </svg> <span class="wa-label">Agendar agora</span>
@@ -3648,6 +3657,5 @@ function iniciarVideo(src, thumbEl) {
 </script>
 </body>
 </html>
-
 
 
